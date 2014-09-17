@@ -6,7 +6,7 @@ class Arewesmallyet < Padrino::Application
   register Padrino::Helpers
   register Padrino::Cache
 
-  use Rack::DomainRedirect, ["www.arewesmallyet.com", "electric-winter-3960.herokuapp.com", "localhost"]
+  use Rack::DomainRedirect, ["arewesmallyet.dev", "localhost"]
 
   enable :caching
   disable :sessions
