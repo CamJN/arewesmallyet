@@ -1,5 +1,4 @@
-source :rubygems
-ruby '1.9.3'
+source 'https://rubygems.org'
 
 # Server requirements
 gem 'unicorn'
