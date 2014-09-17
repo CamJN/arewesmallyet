@@ -9,8 +9,10 @@ cat public/javascripts/jquery.min.js \
     public/javascripts/data.js \
     > public/javascripts/application.tmp.js
 
-java -jar ~/Downloads/yuicompressor-2.4.7.jar \
-    -o public/javascripts/application.js \
-    public/javascripts/application.tmp.js
+# java -jar ~/Downloads/yuicompressor-2.4.7.jar \
+#     -o public/javascripts/application.js \
+#     public/javascripts/application.tmp.js
+
+cp public/javascripts/application.tmp.js public/javascripts/application.js
 
 rm public/javascripts/application.tmp.js
