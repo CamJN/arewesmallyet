@@ -15,12 +15,9 @@ gem 'sequel'
 # Padrino Stable Gem
 gem 'padrino', '0.10.6'
 
-group :development do
-  gem 'sqlite3'
-end
+gem 'sqlite3'
 
 group :production do
   gem 'newrelic_rpm'
   gem 'dalli'
-  gem 'pg'
 end
