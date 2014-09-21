@@ -77,7 +77,7 @@ task :update_once do
   run_updater
 end
 
-task :update do
+task :update => [:environment] do
   while true
     update = Update.first("? >= ?", :finished, 6.hours.ago)
     run_updater unless update

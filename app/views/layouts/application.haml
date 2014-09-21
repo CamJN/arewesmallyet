@@ -11,10 +11,10 @@
 
     %script
       - @records.each do |rec|
-        = "data['#{rec.day}'] = #{rec.data};"
+        = "data['#{rec.day}'] = #{rec.data};".html_safe
 
   %body
-    %h1= "ARE WE <span class='small'>small</span> YET?"
+    %h1= "ARE WE <span class='small'>small</span> YET?".html_safe
 
     #graph-container
       #graph

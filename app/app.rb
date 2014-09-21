@@ -8,14 +8,14 @@ class Arewesmallyet < Padrino::Application
 
   use Rack::DomainRedirect, ["arewesmallyet.dev", "localhost"]
 
-  enable :caching
+  disable :caching
   disable :sessions
   disable :flash
   set :haml, :format => :html5
 
   get :index, :cache => true do
-    expires_in 3600 * 6
-    @records = Record.order(:day.asc)
+    expires 3600 * 6
+    @records = Record.order(:day)
     render :index
   end
 
