@@ -65,7 +65,7 @@ def run_updater
     Updater.new.run
     update = Update.new(finished: DateTime.now)
     update.save rescue false
-    Arewesmallyet.cache.flush
+    Arewesmallyet.cache.clear
   rescue
     puts "[Updater] ERROR: #{$!}"
   end

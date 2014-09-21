@@ -2,7 +2,7 @@ require_relative "../lib/domainredirect.rb"
 
 class Arewesmallyet < Padrino::Application
   register Padrino::Rendering
-  register Padrino::Mailer
+#  register Padrino::Mailer
   register Padrino::Helpers
   register Padrino::Cache
 
