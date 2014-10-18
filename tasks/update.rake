@@ -54,7 +54,7 @@ class Updater
     rec = Record.new(day: date) unless rec
 
     rec.data = sizes.to_json
-    rec.save rescue false
+    rec.save
   end
 end
 
@@ -73,7 +73,7 @@ def run_updater
   puts "[Updater] finished!"
 end
 
-task :update_once do
+task :update_once => [:environment] do
   run_updater
 end
 
