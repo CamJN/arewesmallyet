@@ -214,7 +214,8 @@ $(document).ready(function () {
         }
       },
       xaxis: {
-        mode: "time"
+        mode: "time",
+        color: "transparent"
       },
       legend: {position: "nw"},
       selection: { mode: "x" },
