@@ -1,2 +1,0 @@
-# Ensure the agent is started using Unicorn
-# This is needed when using Unicorn and preload_app is not set to true.

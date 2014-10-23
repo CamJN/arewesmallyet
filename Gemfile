@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-# Server requirements
-gem 'unicorn'
-
 # Project requirements
 gem 'rake'
 
