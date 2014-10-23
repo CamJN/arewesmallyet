@@ -16,6 +16,7 @@ gem 'pg'
 # Padrino Stable Gem
 gem 'padrino'
 
+gem 'padrino-pipeline'
 
 group :production do
 gem 'dalli'

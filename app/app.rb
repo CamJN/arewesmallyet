@@ -2,7 +2,7 @@ require_relative "../lib/domainredirect.rb"
 
 class Arewesmallyet < Padrino::Application
   register Padrino::Rendering
-#  register Padrino::Mailer
+  register Padrino::Pipeline
   register Padrino::Helpers
   register Padrino::Cache
 
@@ -21,6 +21,11 @@ class Arewesmallyet < Padrino::Application
 
   get "/*", :priority => :low do
     redirect "/"
+  end
+
+  configure_assets do |config|
+    config.pipeline = Padrino::Pipeline::Sprockets
+    config.prefix = '/public'
   end
 
   ##
