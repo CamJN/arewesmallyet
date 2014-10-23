@@ -21,3 +21,7 @@ gem 'padrino-pipeline'
 group :production do
 gem 'dalli'
 end
+
+group :test do
+gem 'sqlite3'
+end
