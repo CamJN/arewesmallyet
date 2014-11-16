@@ -9,9 +9,9 @@
     = javascript_include_tag 'application'
     = stylesheet_link_tag 'application'
 
-    %script
-      - @records.each do |rec|
-        = "data['#{rec.day}'] = #{rec.data};".html_safe
+    -# %script
+    -#   - @records.each do |rec|
+    -#     = "data['#{rec.day}'] = #{rec.data};".html_safe
 
   %body
     %h1= "ARE WE <span class='small'>small</span> YET?".html_safe
