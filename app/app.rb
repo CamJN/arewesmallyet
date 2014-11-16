@@ -21,7 +21,7 @@ class Arewesmallyet < Padrino::Application
 
   get :data, provides: :json do
     @records = Record.order(:day).all
-    render @records
+    render @records, layout: false
   end
 
   get "/*", :priority => :low do
