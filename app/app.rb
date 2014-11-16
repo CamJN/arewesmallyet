@@ -23,7 +23,7 @@ class Arewesmallyet < Padrino::Application
     expires 3600 * 12
     @records = Record.order(:day).map do |r|
       {r.day.to_s => JSON.parse(r.data)}
-    end.reduce({}, :merge)
+    end.reduce({}, :merge!)
     @records.to_json
   end
 
