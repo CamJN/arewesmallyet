@@ -19,6 +19,11 @@ class Arewesmallyet < Padrino::Application
     render :index
   end
 
+  get :data, provides: :json do
+    @records = Record.order(:day).all
+    render @records
+  end
+
   get "/*", :priority => :low do
     redirect "/"
   end
