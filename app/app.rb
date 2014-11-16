@@ -14,12 +14,13 @@ class Arewesmallyet < Padrino::Application
   set :haml, :format => :html5
 
   get :index, :cache => true do
-    expires 3600 * 6
+    expires 3600 * 12
     @records = Record.order(:day)
     render :index
   end
 
-  get :data, provides: :json do
+  get :data, :cache => true, provides: :json do
+    expires 3600 * 12
     @records = Record.order(:day).map do |r|
       {r.day.to_s => JSON.parse(r.data)}
     end.reduce({}, :merge)
