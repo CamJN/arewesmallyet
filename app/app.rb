@@ -15,7 +15,6 @@ class Arewesmallyet < Padrino::Application
 
   get :index, :cache => true do
     expires 3600 * 12
-    @records = Record.order(:day)
     render :index
   end
 
