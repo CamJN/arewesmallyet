@@ -1,5 +1,5 @@
 require_relative "../lib/domainredirect.rb"
-require 'rack-mini-profiler'
+#require 'rack-mini-profiler'
 
 class Arewesmallyet < Padrino::Application
   register Padrino::Rendering
@@ -7,7 +7,7 @@ class Arewesmallyet < Padrino::Application
   register Padrino::Helpers
   register Padrino::Cache
 
-  use Rack::MiniProfiler
+  #use Rack::MiniProfiler
   use Rack::DomainRedirect, ["arewesmallyet.dev", "localhost"]
 
   disable :caching
