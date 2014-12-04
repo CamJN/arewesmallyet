@@ -20,10 +20,9 @@ class Arewesmallyet < Padrino::Application
 
   get :data, :cache => true, provides: :json do
     expires 3600 * 12
-    @records = Record.order(:day).map do |r|
-      {r.day.to_s => JSON.parse(r.data)}
-    end.reduce({}, :merge!)
-    @records.to_json
+    Record.order(:day).map do |r|
+      {r.day.to_s => JSON.parse!(r.data)}
+    end.reduce({}, :merge!).to_json
   end
 
   get "/*", :priority => :low do
