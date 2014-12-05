@@ -26,12 +26,6 @@ class Arewesmallyet < Padrino::Application
     end.reduce({}, :merge!).to_json
   end
 
-  # get :data, provides: :json do
-  #   "{"+Record.order(:day).map do |r|
-  #     "\"#{r.day}\":#{r.data},"
-  #   end.reduce(:+).delete(' ').chop+"}"
-  # end
-
   get "/*", :priority => :low do
     redirect "/"
   end
