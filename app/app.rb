@@ -1,5 +1,5 @@
 require_relative "../lib/domainredirect.rb"
-#require 'rack-mini-profiler'
+require 'rack-mini-profiler'
 
 class Arewesmallyet < Padrino::Application
   register Padrino::Rendering
@@ -14,13 +14,11 @@ class Arewesmallyet < Padrino::Application
   disable :flash
   set :haml, :format => :html5
 
-  get :index, :cache => true do
-    expires 3600 * 12
+  get :index do
     render :index
   end
 
-  get :data, :cache => true, provides: :json do
-    expires 3600 * 12
+  get :data, provides: :json do
     Record.order(:day).map do |r|
       {r.day.to_s => JSON.parse!(r.data)}
     end.reduce({}, :merge!).to_json
@@ -37,6 +35,7 @@ class Arewesmallyet < Padrino::Application
 
   configure :production do
     enable :caching
+    expires 3600 * 12
     # You can customize caching store engines:
     #
     #   set :cache, Padrino::Cache::Store::Memcache.new(::Memcached.new('127.0.0.1:11211', :exception_retry_limit => 1))
