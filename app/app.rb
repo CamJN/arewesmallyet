@@ -19,9 +19,11 @@ class Arewesmallyet < Padrino::Application
   end
 
   get :data, provides: :json do
-    Record.order(:day).map do |r|
-      {r.day.to_s => JSON.parse!(r.data)}
-    end.reduce({}, :merge!).to_json
+    # Record.order(:day).map do |r|
+    #   {r.day.to_s => JSON.parse!(r.data)}
+    # end.reduce({}, :merge!).to_json
+
+    Sequel::Model.db.fetch("select format('{%s}', string_agg(format('%s:%s',to_json(day),data) ,',') )::json as jsobj from records;").first[:jsobj]
   end
 
   get "/*", :priority => :low do
