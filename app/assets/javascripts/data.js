@@ -16,7 +16,7 @@ $.ajax({
             return;
         }
         //give up
-        return;
+        //return;
     //}
     //other errors
     console.log(textStatus);
