@@ -15,12 +15,6 @@ gem 'padrino'
 
 gem 'padrino-pipeline'
 
-group :development do
-  gem 'rack-mini-profiler'
-  gem 'stackprof'
-  gem 'flamegraph'
-end
-
 group :production do
 gem 'dalli'
 end

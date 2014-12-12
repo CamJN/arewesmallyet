@@ -1,5 +1,4 @@
 require_relative "../lib/domainredirect.rb"
-require 'rack-mini-profiler'
 
 class Arewesmallyet < Padrino::Application
   register Padrino::Rendering
@@ -49,7 +48,6 @@ class Arewesmallyet < Padrino::Application
   end
 
   configure :development do
-    use Rack::MiniProfiler
     disable :asset_stamp # no asset timestamping for dev
   end
 
