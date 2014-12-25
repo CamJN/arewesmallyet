@@ -10,6 +10,8 @@ class Arewesmallyet < Padrino::Application
 
   disable :sessions
   disable :flash
+  disable :asset_stamp
+  disable :caching
   set :haml, :format => :html5
 
   get :index do
@@ -34,6 +36,7 @@ class Arewesmallyet < Padrino::Application
   end
 
   configure :production do
+    enable :asset_stamp
     enable :caching
     expires 3600 * 12
     # You can customize caching store engines:
@@ -44,11 +47,6 @@ class Arewesmallyet < Padrino::Application
     #   set :cache, Padrino::Cache::Store::Memory.new(50)
     #   set :cache, Padrino::Cache::Store::File.new(Padrino.root('tmp', app_name.to_s, 'cache')) # default choice
     set :cache, Padrino::Cache::Store::Memcache.new(::Dalli::Client.new(:exception_retry_limit => 1))
-  end
-
-  configure :development do
-    disable :asset_stamp # no asset timestamping for dev
-    disable :caching
   end
 
   ##

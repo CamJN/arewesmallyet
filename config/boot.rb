@@ -27,7 +27,7 @@ end
 ##
 # Add your after load hooks here
 #
-Padrino.after_load do
-end
+# Padrino.after_load do
+# end
 
 Padrino.load!
