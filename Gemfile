@@ -21,4 +21,6 @@ end
 
 group :test do
 gem 'sqlite3'
+gem 'capybara'
+gem 'cucumber'
 end
