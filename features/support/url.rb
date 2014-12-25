@@ -11,7 +11,7 @@ module Cucumber
       end
       alias_method :absolute_url, :absolute_url_for
 
-      def path_to(*webpage)
+      def path_to(webpage)
         case webpage
         when 'home'
           '/'
