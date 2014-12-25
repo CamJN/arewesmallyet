@@ -8,7 +8,6 @@ class Arewesmallyet < Padrino::Application
 
   use Rack::DomainRedirect, ["arewesmallyet.dev", "localhost"]
 
-  disable :caching
   disable :sessions
   disable :flash
   set :haml, :format => :html5
@@ -49,6 +48,7 @@ class Arewesmallyet < Padrino::Application
 
   configure :development do
     disable :asset_stamp # no asset timestamping for dev
+    disable :caching
   end
 
   ##

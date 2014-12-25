@@ -5,3 +5,5 @@ Sequel::Model.db = case Padrino.env
   when :production  then Sequel.connect(ENV['DATABASE_URL'],  :loggers => [logger])
   when :test        then Sequel.connect("sqlite://" + Padrino.root('db', "arewesmallyet_test.db"),        :loggers => [logger])
 end
+
+Sequel::Model.db.extension(:connection_validator)
