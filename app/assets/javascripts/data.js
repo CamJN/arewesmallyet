@@ -5,7 +5,12 @@ $.ajax({
   retryLimit : 3,
   success:function(r){
     $.extend(window.data,r);
-    main();
+    try{
+      main();
+    }catch(e){
+      console.log(e);
+      main();
+    }
   },
   error:function(xhr, textStatus, errorThrown ) {
     //if (textStatus == 'timeout') {
