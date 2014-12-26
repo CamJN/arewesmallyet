@@ -20,7 +20,7 @@ gem 'dalli'
 end
 
 group :test do
-gem 'sqlite3'
+gem 'selenium-webdriver'
 gem 'capybara'
 gem 'cucumber'
 end

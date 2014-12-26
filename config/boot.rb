@@ -14,6 +14,7 @@ require 'active_support/time_with_zone'
 # Enable devel logging
 #
  Padrino::Logger::Config[:development] = { :log_level => :debug, :stream => :to_file }
+ Padrino::Logger::Config[:test] = { :log_level => :debug, :stream => :to_file }
 #
 
 ##
