@@ -10,4 +10,5 @@ require 'capybara/cucumber'
 # You can handle all padrino applications using instead:
 #   Padrino.application
 Capybara.app = Arewesmallyet
+Selenium::WebDriver::Firefox::Binary.path='/Applications/FirefoxNightly.app/Contents/MacOS/firefox-bin'
 Capybara.app_host = 'http://arewesmallyet.dev'
