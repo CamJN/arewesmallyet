@@ -10,9 +10,4 @@ require 'capybara/cucumber'
 # You can handle all padrino applications using instead:
 #   Padrino.application
 Capybara.app = Arewesmallyet
-# Capybara.run_server = true
-# Capybara.server_port = 3000
-# Capybara.javascript_driver = :selenium
-# Selenium::WebDriver::Firefox::Binary.path='/Applications/FirefoxNightly.app/Contents/MacOS/firefox-bin'
-#Capybara.default_host = 'http://arewesmallyet.dev'
 Capybara.app_host = 'http://arewesmallyet.dev'
