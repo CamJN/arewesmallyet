@@ -17,6 +17,8 @@ gem 'padrino-pipeline'
 
 group :production do
 gem 'dalli'
+gem 'uglifier'
+gem 'yui-compressor'
 end
 
 group :test do
