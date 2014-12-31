@@ -75,7 +75,7 @@ h1 {
     padding: 0 10px;
   }
   .release {
-    top: 0px;
+    top: 0;
     font-size: 0.3em;
   }
   #graph {
