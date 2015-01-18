@@ -1,9 +1,0 @@
-//= require jquery
-//= require jquery.flot
-//= require jquery.flot.time
-//= require jquery.flot.resize
-//= require jquery.flot.selection
-//= require jquery.flot.navigate
-//= require plugins
-//= require main
-//= require data
