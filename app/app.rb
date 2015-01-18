@@ -33,6 +33,7 @@ class Arewesmallyet < Padrino::Application
   configure_assets do |config|
     config.pipeline = Padrino::Pipeline::Sprockets
     config.prefix = '/public'
+    config.enable_compression = true if (RACK_ENV == 'production')
   end
 
   configure :production do

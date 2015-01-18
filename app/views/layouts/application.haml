@@ -6,8 +6,8 @@
     %meta{:charset => "utf-8"}
     %title= "ARE WE small YET?"
 
-    = javascript_include_tag ((RACK_ENV == 'development')? 'application' : 'application_min' )
     = stylesheet_link_tag 'application'
+    = javascript_include_tag ((RACK_ENV == 'production')? 'application_min' : 'application' ), async: true
 
   %body
     = yield
