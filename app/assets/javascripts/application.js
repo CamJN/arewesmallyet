@@ -4,6 +4,7 @@
 //= require jquery.flot.resize
 //= require jquery.flot.selection
 //= require jquery.flot.navigate
+//= require releases
 //= require plugins
 //= require main
 //= require data

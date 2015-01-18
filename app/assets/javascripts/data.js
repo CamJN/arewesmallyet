@@ -5,25 +5,15 @@ $.ajax({
   retryLimit : 3,
   success:function(r){
     $.extend(window.data,r);
-    try{
-      main();
-    }catch(e){
-      console.log(e);
-      main();
-    }
+    $(main);
   },
   error:function(xhr, textStatus, errorThrown ) {
-    //if (textStatus == 'timeout') {
-        this.tryCount++;
-        if (this.tryCount <= this.retryLimit) {
-            //try again
-            $.ajax(this);
-            return;
-        }
-        //give up
-        //return;
-    //}
-    //other errors
+    this.tryCount++;
+    if (this.tryCount <= this.retryLimit) {
+      //try again
+      $.ajax(this);
+      return;
+    }
     console.log(textStatus);
   }
 })
