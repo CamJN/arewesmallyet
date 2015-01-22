@@ -11,3 +11,7 @@ Feature: Landing
     Given records exist in the database
     When I visit the data page
     Then I should be served the json data
+
+  Scenario: wrong page
+    When I visit the incorrect page
+    Then I should be redirected to the home page

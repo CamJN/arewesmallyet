@@ -1,4 +1,5 @@
 When /^I visit the (.*) page$/ do |webpage|
+  page.driver.allow_url(path_to(webpage)) if page.driver.respond_to? :allow_url
   visit path_to(webpage)
 end
 
@@ -13,5 +14,5 @@ Given /^records exist in the database$/ do
 end
 
 Then /^I should be served the json data$/ do
-  assert page.has_content?('"2012-06-11":{"linux":23089576,"linux64":25033906,"win":17733856,"win64":18891359,"mac":42412851}'), 'proper content missing'
+  assert page.has_content?('"2012-06-11" : {"linux":23089576,"linux64":25033906,"win":17733856,"win64":18891359,"mac":42412851}'), 'proper content missing'
 end
