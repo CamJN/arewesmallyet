@@ -17,6 +17,8 @@ module Cucumber
           '/'
         when 'data'
           '/data'
+        when 'incorrect'
+          '/blah'
         end
       end
 
