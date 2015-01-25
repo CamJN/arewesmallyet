@@ -18,5 +18,5 @@ Then /^I should be served the json data$/ do
 end
 
 Then /^I should be redirected to the (.*) page$/ do |webpage|
-  assert_equal 'http://arewesmallyet.dev/', current_url
+  assert_equal 'http://arewesmallyet.dev'+path_to(webpage), current_url
 end
