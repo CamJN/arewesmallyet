@@ -7,7 +7,7 @@ function main() {
   }
 
   var previousPoint = null;
-  var days = Object.keys(data).sort();
+  var days = Object.keys(data);//.sort(); //already sorted in query
 
   function getDisplays() {
     return Systems.map(function (sys) {

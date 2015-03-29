@@ -23,7 +23,7 @@ class Arewesmallyet < Padrino::Application
     #   {r.day.to_s => JSON.parse!(r.data)}
     # end.reduce({}, :merge!).to_json
 
-    Sequel::Model.db.fetch("select json_object_agg(day,data) as jsobj from records;").first[:jsobj]
+    Sequel::Model.db.fetch("select json_object_agg(day,data order by day) as jsobj from records;").first[:jsobj]
   end
 
   get "/*", :priority => :low do
