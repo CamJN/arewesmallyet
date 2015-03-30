@@ -10,7 +10,7 @@ class Updater
     linux: ['*.linux-i686.tar.bz2'],
     linux64: ['*.linux-x86_64.tar.bz2'],
     win: ['*.win32.zip', '*.win32.installer.exe'],
-    win64: ['*.win64-x86_64.installer.exe'],
+    win64: ['*.win64-x86_64.installer.exe','*.win64.zip','*.win64.installer.exe'],
     mac: ['*.mac64.dmg', '*.mac.dmg']
   }
 
