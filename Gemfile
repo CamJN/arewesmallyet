@@ -15,6 +15,10 @@ gem 'padrino'
 
 gem 'padrino-pipeline'
 
+group :development do
+gem 'open_uri_redirections'
+end
+
 group :production do
 gem 'dalli'
 gem 'uglifier'
