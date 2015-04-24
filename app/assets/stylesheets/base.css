@@ -24,11 +24,13 @@ h1 {
   font-size: .6em;
 }
 
-.release {
+div.release {
   position: absolute;
   top: -10px;
   font-weight: bold;
   white-space: nowrap;
+  font-size: .58em;
+  /*transform: rotate(90deg);*/
 }
 
 #footer {

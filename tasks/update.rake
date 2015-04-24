@@ -2,6 +2,9 @@ require 'date'
 require 'json'
 require 'net/ftp'
 require 'active_support/all'
+require 'open-uri'
+require 'open_uri_redirections'
+require 'nokogiri'
 
 class Updater
   @@root = "/pub/mozilla.org/firefox/nightly"
@@ -75,12 +78,18 @@ end
 
 task :update_once => [:environment] do
   run_updater
+  check_versions
 end
 
-task :update => [:environment] do
-  while true
-    update = Update.first("? >= ?", :finished, 6.hours.ago)
-    run_updater unless update
-    sleep 1800 # 30 minutes
-  end
+def check_versions
+  page_url = 'https://www.mozilla.org/en-US/firefox/releases/'
+  contents = Nokogiri::HTML(open(page_url)).css('#main-content > ol > li > strong > a').map{|e| {text:e.text,href:e['href']} }.map do |v|
+    {date_str: Nokogiri::HTML(open(URI.join(page_url,v[:href]).to_s,allow_redirections: :all))
+                .css('header.notes-head > h2, #main-feature > h2 > small, #main-feature > p > em').text
+                .split(/ (released|users) (on )?/).last,
+       version: v[:text]}
+  end.select{|e| !e[:date_str].nil? }.map do |e|
+    [Date.parse(e[:date_str]).to_s, e[:version].sub(/\.0$/,'')]
+  end.reverse.to_s.prepend('var releaseDates = ').concat(';')
+  File.open('app/assets/javascripts/releases.js', 'w') { |file| file.write(contents) }
 end
