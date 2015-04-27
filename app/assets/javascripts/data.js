@@ -1,6 +1,6 @@
 var data = {}
 $.ajax({
-  url:'/data',
+  url:'data.json',
   tryCount : 0,
   retryLimit : 3,
   success:function(r){
