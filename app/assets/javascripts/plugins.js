@@ -56,7 +56,9 @@
 
   function insertReleaseTicks(plot) {
     plot.hooks.draw.push(function (plot, ctx) {
-      $(".release").remove();
+      //$('.release').remove();
+      var graph = document.getElementById('graph');
+      [].slice.call(document.getElementsByClassName('release')).forEach(graph.removeChild.bind(graph));
 
       ctx.save();
 

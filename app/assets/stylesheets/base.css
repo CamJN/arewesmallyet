@@ -30,7 +30,7 @@ div.release {
   font-weight: bold;
   white-space: nowrap;
   font-size: .58em;
-  /*transform: rotate(90deg);*/
+  transform: rotate(-45deg);
 }
 
 #footer {
