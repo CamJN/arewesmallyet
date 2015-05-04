@@ -75,11 +75,13 @@ class Updater
   end
 end
 
-def run_updater
+def run_updater(backfilling=false)
   puts "[Updater] starting..."
 
   begin
-    Updater.new.run
+    updater = Updater.new
+    updater.dates = nil if backfilling
+    updater.run
     update = Update.new(finished: DateTime.now)
     update.save rescue false
     Arewesmallyet.cache.clear
@@ -91,13 +93,12 @@ def run_updater
 end
 
 task :update_once => [:environment] do
-  @@dates = nil
   run_updater
   check_versions
 end
 
 task :backfill => [:environment] do
-  run_updater
+  run_updater true
 end
 
 def check_versions
