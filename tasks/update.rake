@@ -13,44 +13,58 @@ class Updater
     linux: ['*.linux-i686.tar.bz2'],
     linux64: ['*.linux-x86_64.tar.bz2'],
     win: ['*.win32.zip', '*.win32.installer.exe'],
-    win64: ['*.win64-x86_64.installer.exe','*.win64.zip','*.win64.installer.exe'],
+    win64: ['*.win64-x86_64.installer.exe','*.win64-x86_64.zip','*.win64.zip','*.win64.installer.exe'],
     mac: ['*.mac64.dmg', '*.mac.dmg']
   }
 
+  @@dates = [
+    Date.new(2010,2,7),
+    Date.new(2010,2,12),
+    Date.new(2010,2,13),
+    Date.new(2010,2,14),
+    Date.new(2010,2,15),
+    Date.new(2010,3,3),
+    Date.new(2010,5,8),
+    Date.new(2010,5,9),
+    Date.new(2012,7,7),
+    Date.new(2013,1,22)
+  ]
+
   def run
-    date = Date.today
+    @@dates = (4.days.ago.to_date .. Date.today).to_a if @@dates.nil?
 
     Net::FTP.open("ftp.mozilla.org") do |ftp|
       ftp.passive = true
       ftp.login
 
-      5.times do
+      @@dates.each_with_index do |date,i|
         ftp.chdir date.strftime("#{@@root}/%Y/%m/")
         pattern = date.strftime("%Y-%m-%d-*-mozilla-central")
 
-        res = ftp.list(pattern).first
+        res = ftp.list(pattern)
         if res
-          ftp.chdir("#{ftp.pwd}/#{res.split.last}")
-          self.fetch_current_day(ftp, date)
+          self.fetch_current_day(ftp, res, date)
         end
-
-        date = date.prev_day
+        puts "#{100*(i+1)/@@dates.length}% done\n"
       end
 
       ftp.close
     end
   end
 
-  def fetch_current_day(ftp, date)
+  def fetch_current_day(ftp, res_list, date)
     sizes = {}
-    @@names.each do |system, extensions|
-      extensions.each do |ext|
-        file = ftp.list(ext).first
-        next unless file
-
-        size = ftp.size(file.split.last)
-        sizes[system] = size
+    res_list.each do |res|
+      ftp.chdir("#{ftp.pwd}/#{res.split.last}")
+      @@names.each do |os, suffixes|
+        suffixes.each do |sfx|
+          file = ftp.list(sfx).first
+          next unless file
+          size = ftp.size(file.split.last)
+          sizes[os] = size
+        end
       end
+      ftp.chdir('..')
     end
 
     rec = Record.first(day: date)
@@ -70,26 +84,31 @@ def run_updater
     update.save rescue false
     Arewesmallyet.cache.clear
   rescue
-    puts "[Updater] ERROR: #{$!}"
+    puts "[Updater] ERROR: #{$@}: #{$!}"
   end
 
   puts "[Updater] finished!"
 end
 
 task :update_once => [:environment] do
+  @@dates = nil
   run_updater
   check_versions
+end
+
+task :backfill => [:environment] do
+  run_updater
 end
 
 def check_versions
   page_url = 'https://www.mozilla.org/en-US/firefox/releases/'
   contents = Nokogiri::HTML(open(page_url)).css('#main-content > ol > li > strong > a').map{|e| {text:e.text,href:e['href']} }.map do |v|
     {date_str: Nokogiri::HTML(open(URI.join(page_url,v[:href]).to_s,allow_redirections: :all))
-                .css('header.notes-head > h2, #main-feature > h2 > small, #main-feature > p > em').text
-                .split(/ (released|users) (on )?/).last,
-       version: v[:text]}
-  end.select{|e| !e[:date_str].nil? }.map do |e|
-    [Date.parse(e[:date_str]).to_s, e[:version].sub(/\.0$/,'')]
-  end.reverse.to_s.prepend('var releaseDates = ').concat(';')
-  File.open('app/assets/javascripts/releases.js', 'w') { |file| file.write(contents) }
-end
+      .css('header.notes-head > h2, #main-feature > h2 > small, #main-feature > p > em').text
+      .split(/ (released|users) (on )?/).last,
+      version: v[:text]}
+    end.select{|e| !e[:date_str].nil? }.map do |e|
+      [Date.parse(e[:date_str]).to_s, e[:version].sub(/\.0$/,'')]
+    end.reverse.to_s.prepend('var releaseDates = ').concat(';')
+    File.open('app/assets/javascripts/releases.js', 'w') { |file| file.write(contents) }
+  end
