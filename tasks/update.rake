@@ -80,7 +80,7 @@ def run_updater(backfilling=false)
 
   begin
     updater = Updater.new
-    updater.dates = nil if backfilling
+    updater.dates = nil unless backfilling
     updater.run
     update = Update.new(finished: DateTime.now)
     update.save rescue false
