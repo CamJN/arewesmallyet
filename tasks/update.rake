@@ -30,8 +30,8 @@ class Updater
     Date.new(2013,1,22)
   ]
 
-  def self.dates
-    @@dates
+  def self.dates=(dates)
+    @@dates = dates
   end
 
   def run
@@ -83,7 +83,7 @@ def run_updater(backfilling=false)
   puts "[Updater] starting..."
 
   begin
-    Updater.dates << nil unless backfilling
+    Updater.dates = nil unless backfilling
     updater = Updater.new.run
     update = Update.new(finished: DateTime.now)
     update.save rescue false
