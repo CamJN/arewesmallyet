@@ -73,15 +73,17 @@
       var plotHeight = plot.height();
       var plotWidth = plot.width();
 
-      releaseDates.forEach(function (rdate) {
+      releaseDatesSafe = JSON.parse(JSON.stringify(releaseDates));
+
+      releaseDatesSafe.forEach(function (rdate) {
         var x = xaxis.p2c(+new Date(rdate[0]));
         rdate[0] = Math.floor(x) + 0.5;
       });
 
-      releaseDates.forEach(function (rdate, index) {
+      releaseDatesSafe.forEach(function (rdate, index) {
         var x = rdate[0];
-        var isLast = index + 1 >= releaseDates.length;
-        var nextx = isLast ? plotWidth : releaseDates[index + 1][0];
+        var isLast = index + 1 >= releaseDatesSafe.length;
+        var nextx = isLast ? plotWidth : releaseDatesSafe[index + 1][0];
         if (x >= plotWidth || (!isLast && nextx <= 0))
           return;
 
