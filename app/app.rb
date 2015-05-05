@@ -35,7 +35,7 @@ class Arewesmallyet < Padrino::Application
     config.prefix = '/public'
     config.enable_compression = true if (RACK_ENV == 'production')
   end
-  settings.assets.js_compressor = Uglifier.new(output: {comments: :none}, :mangle => true)
+  settings.assets.js_compressor = Uglifier.new(output: {comments: :none}, :mangle => true) if (RACK_ENV == 'production')
 
   configure :production do
     enable :asset_stamp
