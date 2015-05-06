@@ -3,6 +3,7 @@
 //= require jquery.flot.time
 //= require jquery.flot.resize
 //= require jquery.flot.selection
+//= require jquery.flot.hiddengraphs
 //= require releases
 //= require plugins
 //= require main

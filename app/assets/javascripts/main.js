@@ -44,7 +44,7 @@ function main() {
         mode: "time",
         color: "transparent"
       },
-      legend: {position: "nw"},
+      legend: {position: "nw",hideable:true},
       selection: { mode: "x" },
       grid: {hoverable: true, clickable: true}
     };
