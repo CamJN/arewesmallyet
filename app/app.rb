@@ -26,6 +26,26 @@ class Arewesmallyet < Padrino::Application
     Sequel::Model.db.fetch("select json_object_agg(day,data order by day) as jsobj from records;").first[:jsobj]
   end
 
+  get :stats, provides: :json do
+    Sequel::Model.db.fetch("select json_build_object(
+    'max_mac', max((data->>'mac')::int),
+    'min_mac', min((data->>'mac')::int),
+    'max_win', max((data->>'win')::int),
+    'min_win', min((data->>'win')::int),
+    'max_win64', max((data->>'win64')::int),
+    'min_win64', min((data->>'win64')::int),
+    'max_linux', max((data->>'linux')::int),
+    'min_linux', min((data->>'linux')::int),
+    'max_linux64', max((data->>'linux64')::int),
+    'min_linux64', min((data->>'linux64')::int),
+    'linux_fails', SUM(((data->'linux') is null)::int),
+    'linux64_fails', SUM(((data->'linux64') is null)::int),
+     'win_fails', SUM(((data->'win') is null)::int),
+     'win64_fails', SUM(((data->'win64') is null)::int),
+     'mac_fails', SUM(((data->'mac') is null)::int)
+     ) as jsobj from records;").first[:jsobj]
+  end
+
   get "/*", :priority => :low do
     redirect "/"
   end
