@@ -38,12 +38,21 @@ class Arewesmallyet < Padrino::Application
     'min_linux', min((data->>'linux')::int),
     'max_linux64', max((data->>'linux64')::int),
     'min_linux64', min((data->>'linux64')::int),
-    'linux_fails', SUM(((data->'linux') is null)::int),
-    'linux64_fails', SUM(((data->'linux64') is null)::int),
-     'win_fails', SUM(((data->'win') is null)::int),
-     'win64_fails', SUM(((data->'win64') is null)::int),
-     'mac_fails', SUM(((data->'mac') is null)::int)
-     ) as jsobj from records;").first[:jsobj]
+    'count_linux', count(data->'linux'),
+    'count_linux64', count(data->'linux64'),
+    'count_win', count(data->'win'),
+    'count_win64', count(data->'win64'),
+    'count_mac', count(data->'mac'),
+    'count', count(*),
+    'first', min(day),
+    'last', max(day),
+    'slope_linux', regr_slope((data->>'linux')::int,EXTRACT(EPOCH FROM day)),
+    'slope_linux64', regr_slope((data->>'linux64')::int,EXTRACT(EPOCH FROM day)),
+    'slope_win', regr_slope((data->>'win')::int,EXTRACT(EPOCH FROM day)),
+    'slope_win64', regr_slope((data->>'win64')::int,EXTRACT(EPOCH FROM day)),
+    'slope_mac', regr_slope((data->>'mac')::int,EXTRACT(EPOCH FROM day))
+    ) as jsobj from records;").first[:jsobj]
+    # slope is bytes / second
   end
 
   get "/*", :priority => :low do
@@ -55,7 +64,7 @@ class Arewesmallyet < Padrino::Application
     config.prefix = '/public'
     config.enable_compression = true if (RACK_ENV == 'production')
   end
-  settings.assets.js_compressor = Uglifier.new(output: {comments: :none}, :mangle => true) if (RACK_ENV == 'production')
+  settings.assets.js_compressor = Uglifier.new(output: {comments: :none}, mangle: true) if (RACK_ENV == 'production')
 
   configure :production do
     enable :asset_stamp
