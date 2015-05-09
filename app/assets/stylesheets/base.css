@@ -4,6 +4,10 @@ body {
   color: #000;
 }
 
+.hidden{
+  display:none;
+}
+
 a {
   color: #000;
   text-decoration: none;

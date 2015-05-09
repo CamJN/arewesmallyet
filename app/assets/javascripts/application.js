@@ -7,4 +7,5 @@
 //= require releases
 //= require plugins
 //= require main
+//= require statistics
 //= require data
