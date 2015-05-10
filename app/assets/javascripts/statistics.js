@@ -4,24 +4,23 @@ function statistics() {
     var first_data = window.data[window.stats.first];
     var last_data = window.data[window.stats.last];
     Systems.forEach(function(e,i,a){
-      window.stats["delta_"+e] = ((last_data[e]-first_data[e])/first_data[e])
+      window.stats["delta_"+e] = ((last_data[e]-first_data[e])/first_data[e]).toFixed(1)+' ×';
+      window.stats["maxima_"+e] = (last_data[e] == window.stats["max_"+e]);
+      window.stats["missing_"+e] = (window.stats.count-window.stats["count_"+e]);
+      window.stats["max_"+e] = (window.stats["max_"+e]/(1024*1024)).toFixed(1)+' MB';
+      window.stats["min_"+e] = (window.stats["min_"+e]/(1024*1024)).toFixed(1)+' MB';
+      window.stats["slope_"+e] = window.stats["slope_"+e].toFixed(1)+' B/s';
     });
-    Systems.forEach(function(e,i,a){
-      window.stats["maxima_"+e] = (last_data[e] == window.stats["max_"+e])
-    });
-  }
-  Systems.forEach(function(e,i,a){
-    window.stats["missing_"+e] = (window.stats.count-window.stats["count_"+e])
-  });
 
-  var table = $('<table></table>').addClass('hidden');
-  table.append($('<thead><tr><td></td>'+Systems.reduce(function(p,e,i,a){return p+'<td>'+e+'</td>'},'')+'</tr></thead>'));
-  ["max","min","slope","delta","maxima","missing"].forEach(function(l,i,a){
+    var table = $('<table></table>').addClass('hidden');
+    table.append($('<thead><tr><td></td>'+Systems.reduce(function(p,e,i,a){return p+'<td>'+e+'</td>'},'')+'</tr></thead>'));
+    ["max","min","slope","delta","maxima","missing"].forEach(function(l,i,a){
       var row = $('<tr><td>'+l+'</td>'+Systems.reduce(function(p,e,i,a){
-          return p+'<td>'+window.stats[l+'_'+e]+'</td>'
+        return p+'<td>'+window.stats[l+'_'+e]+'</td>'
       },'')+'</tr>');
       table.append(row);
-  });
+    });
 
-  $('#here_table').append(table);
+    $('#here_table').append(table);
+  }
 }
