@@ -2,7 +2,9 @@
 
 #graph-container
   #graph
-  %span= "Lower is better"
+  %span
+    Lower is better,
+    %a{onclick: "$('table.hidden').show()"}= "show more stats"
 
 #here_table
 
