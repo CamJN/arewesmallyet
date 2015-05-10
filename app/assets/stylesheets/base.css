@@ -8,6 +8,10 @@ body {
   display:none;
 }
 
+#here_table{
+  float:right;
+}
+
 a {
   color: #000;
   text-decoration: none;
@@ -38,7 +42,7 @@ div.release {
 }
 
 #footer {
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   padding: 10px;
