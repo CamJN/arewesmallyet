@@ -13,9 +13,9 @@ function statistics() {
     });
 
     var table = $('<table></table>').addClass('hidden');
-    table.append($('<thead><tr><td></td>'+Systems.reduce(function(p,e,i,a){return p+'<td>'+e+'</td>'},'')+'</tr></thead>'));
+    table.append($('<thead><tr><th></th>'+Systems.reduce(function(p,e,i,a){return p+'<th>'+e+'</th>'},'')+'</tr></thead>'));
     ["max","min","slope","delta","maxima","missing"].forEach(function(l,i,a){
-      var row = $('<tr><td>'+l+'</td>'+Systems.reduce(function(p,e,i,a){
+      var row = $('<tr><th>'+l+'</th>'+Systems.reduce(function(p,e,i,a){
         return p+'<td>'+window.stats[l+'_'+e]+'</td>'
       },'')+'</tr>');
       table.append(row);
