@@ -9,4 +9,3 @@ See also:
 
 TODO:
 - separate mac & mac_64
-- fix mobile UI, much too squished
