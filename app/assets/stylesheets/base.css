@@ -10,6 +10,7 @@ body {
 
 #here_table{
   float:right;
+  margin-bottom: 30px;
 }
 
 #here_table table > tbody > tr > td,
@@ -105,15 +106,23 @@ div.release {
  text-decoration: none;
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 1034px){
   #graph-container {
     padding: 0 10px;
   }
-  .release {
+  div.release {
     top: 0;
     font-size: 0.3em;
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
   }
   #graph {
     height: 350px;
+  }
+}
+
+@media only screen and (min-width: 2000px){
+  div.release {
+    transform: none;
   }
 }
