@@ -37,7 +37,7 @@ class Arewesmallyet < Padrino::Application
     # slope is bytes / second
   end
 
-  get "/*", :priority => :low do
+  get "/*", priority: :low do
     redirect "/"
   end
 
