@@ -6,8 +6,12 @@ class Arewesmallyet < Padrino::Application
   register Padrino::Helpers
   register Padrino::Cache
 
-  use Rack::DomainRedirect, ["arewesmallyet.dev", "localhost"]
-
+  if (RACK_ENV != 'production')
+    use Rack::DomainRedirect, ["arewesmallyet.dev", "localhost"]
+  else
+    use Rack::DomainRedirect, ["arewesmallyet.com"]
+  end
+  
   disable :sessions
   disable :flash
   disable :asset_stamp
