@@ -9,7 +9,7 @@ class Arewesmallyet < Padrino::Application
 
   configure :development do
       use Rack::DomainRedirect, ["arewesmallyet.dev", "localhost"]
-      use Rack::MiniProfiler
+      #use Rack::MiniProfiler
       disable :asset_stamp
       disable :caching
     end
