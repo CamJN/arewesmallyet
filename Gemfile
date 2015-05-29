@@ -17,6 +17,9 @@ gem 'padrino-pipeline'
 
 group :development do
 gem 'open_uri_redirections'
+gem 'rack-mini-profiler'
+gem 'stackprof'
+gem 'flamegraph', github: 'CamJN/flamegraph', branch: 'filtering'
 end
 
 group :production do
