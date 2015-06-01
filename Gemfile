@@ -16,7 +16,7 @@ gem 'padrino'
 gem 'padrino-pipeline'
 
 group :development do
-gem 'open_uri_redirections'
+
 gem 'rack-mini-profiler'
 gem 'stackprof'
 gem 'flamegraph', github: 'CamJN/flamegraph', branch: 'filtering'
@@ -29,6 +29,7 @@ gem 'yui-compressor'
 end
 
 group :test do
+gem 'open_uri_redirections'
 gem 'capybara-webkit'
 gem 'capybara'
 gem 'cucumber'
