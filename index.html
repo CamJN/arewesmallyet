@@ -1,24 +1,1285 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='utf-8'>
-    <meta content='width=device-width, initial-scale=1' name='viewport'>
-    <title>ARE WE small YET?</title>
-    <link href="application.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="application.js" async="true" type="text/javascript"></script>
-  </head>
-  <body>
-    <h1>ARE WE <span class='small'>small</span> YET?</h1>
-    <div id='graph-container'>
-      <div id='graph'></div>
-      <span>
-        Lower is better,
-        <a onclick="$('table.hidden').show()">show more stats</a>
-      </span>
-    </div>
-    <div id='here_table'></div>
-    <div id='footer'>
-      <a href="https://github.com/CamJN/arewesmallyet">Sources on GitHub.</a>
-    </div>
-  </body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="Phusion Passenger">
+	<title>Web application could not be started</title>
+	<style type="text/css">
+		body {
+	font-family: Verdana, 'Bitstream Vera Sans', Arial, Sans-Serif;
+	font-size: 10pt;
+	background: white;
+	color: #222222;
+	margin: 0;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	padding-left: 4.5em;
+	padding-right: 4.5em;
+}
+
+h1 {
+	font-size: 17pt;
+	font-weight: medium;
+	color: #533e72;
+	border-bottom: 1px solid #533e72;
+}
+
+h1.title {
+	margin-top: 0;
+}
+
+h1.error_title {
+	color: red;
+	border-bottom: 1px solid red;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+dt {
+	font-weight: bold;
+	color: #280050;
+}
+
+dd {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+.commands {
+	border: 1px solid #b594e7;
+	background: #ddc6ff;
+	padding: 0.5em;
+	margin: 0.5em;
+	font-family: 'Bitstream Vera Sans Mono', 'Courier New', Monospace;
+}
+
+pre {
+	overflow: auto;
+	white-space: pre-wrap;
+	text-align: left;
+}
+
+table.backtrace th {
+	background: #8470a6;
+	color: white;
+}
+
+table.backtrace th,
+table.backtrace td {
+	padding: 0.2em;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+
+table.backtrace tr td {
+	background: #ecdfff;
+}
+
+table.backtrace tr.even td {
+	background: #f7f2ff;
+}
+
+table.backtrace td.index {
+	font-weight: bold;
+}
+
+#site_footer {
+	border-top: solid 1px black;
+	margin-top: 1em;
+	padding-top: 1em;
+	font-size: small;
+	color: #777777;
+}
+
+#site_footer a {
+	color: #65498e;
+}
+
+#site_footer a:hover {
+	color: #9681d9;
+}
+
+#site_header .corporate_identity {
+	display: none;
+}
+
+	</style>
+	<link rel="stylesheet" type="text/css" href="http://www.modrails.com/error_pages/1.0/error_page.css">
+	<style type="text/css">
+		dd {
+			text-align: left;
+		}
+
+		dd pre {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="site_container">
+		<div id="site_header">
+			<ul class="corporate_identity">
+				<li class="logo"><a href="https://www.phusionpassenger.com"><span>Phusion Passenger</span></a></li>
+			</ul>
+		</div>
+		<div id="site_body">
+			<h1 class="error_title">Web application could not be started</h1>
+			<div id="content">
+				<pre>PG:<wbr>:<wbr>ConnectionBad:<wbr> could not connect to server:<wbr> Connection refused
+	Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+ (Sequel:<wbr>:<wbr>DatabaseConnectionError)
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/adapters/postgres.rb:<wbr>237:<wbr>in `initialize&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/adapters/postgres.rb:<wbr>237:<wbr>in `new&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/adapters/postgres.rb:<wbr>237:<wbr>in `connect&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool.rb:<wbr>101:<wbr>in `make_new&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool/threaded.rb:<wbr>222:<wbr>in `make_new&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool/threaded.rb:<wbr>195:<wbr>in `available&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool/threaded.rb:<wbr>131:<wbr>in `_acquire&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool/threaded.rb:<wbr>145:<wbr>in `block in acquire&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool/threaded.rb:<wbr>263:<wbr>in `block in sync&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool/threaded.rb:<wbr>263:<wbr>in `synchronize&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool/threaded.rb:<wbr>263:<wbr>in `sync&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool/threaded.rb:<wbr>144:<wbr>in `acquire&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/extensions/connection_validator.rb:<wbr>86:<wbr>in `acquire&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool/threaded.rb:<wbr>102:<wbr>in `hold&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/connecting.rb:<wbr>250:<wbr>in `synchronize&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/adapters/shared/postgres.rb:<wbr>456:<wbr>in `server_version&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/adapters/shared/postgres.rb:<wbr>1611:<wbr>in `server_version&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset/sql.rb:<wbr>228:<wbr>in `select_sql&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset/sql.rb:<wbr>146:<wbr>in `sql&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/connecting.rb:<wbr>315:<wbr>in `valid_connection_sql&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/extensions/connection_validator.rb:<wbr>68:<wbr>in `extended&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/extensions/connection_validator.rb:<wbr>108:<wbr>in `extend&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/extensions/connection_validator.rb:<wbr>108:<wbr>in `block in &lt;module:<wbr>Sequel&gt;&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/misc.rb:<wbr>200:<wbr>in `call&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/misc.rb:<wbr>200:<wbr>in `block in extension&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/misc.rb:<wbr>198:<wbr>in `each&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/misc.rb:<wbr>198:<wbr>in `extension&apos;
+  /Users/camdennarzt/Developer/Ruby/arewesmallyet/config/database.rb:<wbr>9:<wbr>in `&lt;top (required)&gt;&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/reloader.rb:<wbr>90:<wbr>in `require&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/reloader.rb:<wbr>90:<wbr>in `safe_load&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/loader.rb:<wbr>141:<wbr>in `block in require_dependencies&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/loader.rb:<wbr>139:<wbr>in `each&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/loader.rb:<wbr>139:<wbr>in `require_dependencies&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/loader.rb:<wbr>58:<wbr>in `load!&apos;
+  /Users/camdennarzt/Developer/Ruby/arewesmallyet/config/boot.rb:<wbr>34:<wbr>in `&lt;top (required)&gt;&apos;
+  config.ru:<wbr>7:<wbr>in `require&apos;
+  config.ru:<wbr>7:<wbr>in `block in &lt;main&gt;&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack/builder.rb:<wbr>55:<wbr>in `instance_eval&apos;
+  /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack/builder.rb:<wbr>55:<wbr>in `initialize&apos;
+  config.ru:<wbr>1:<wbr>in `new&apos;
+  config.ru:<wbr>1:<wbr>in `&lt;main&gt;&apos;
+  /usr/local/Cellar/passenger/5.0.10/libexec/helper-scripts/rack-preloader.rb:<wbr>107:<wbr>in `eval&apos;
+  /usr/local/Cellar/passenger/5.0.10/libexec/helper-scripts/rack-preloader.rb:<wbr>107:<wbr>in `preload_app&apos;
+  /usr/local/Cellar/passenger/5.0.10/libexec/helper-scripts/rack-preloader.rb:<wbr>153:<wbr>in `&lt;module:<wbr>App&gt;&apos;
+  /usr/local/Cellar/passenger/5.0.10/libexec/helper-scripts/rack-preloader.rb:<wbr>29:<wbr>in `&lt;module:<wbr>PhusionPassenger&gt;&apos;
+  /usr/local/Cellar/passenger/5.0.10/libexec/helper-scripts/rack-preloader.rb:<wbr>28:<wbr>in `&lt;main&gt;&apos;
+</pre>
+
+				<dl>
+				<dt>Error ID</dt>
+				<dd>50a270a2</dd>
+				<dt>Application root</dt>
+				<dd>/Users/camdennarzt/Sites/arewesmallyet</dd>
+				<dt>Environment (value of RAILS_ENV, RACK_ENV, WSGI_ENV, NODE_ENV and PASSENGER_APP_ENV)</dt>
+				<dd>development</dd>
+				
+					<dt>Ruby interpreter command</dt>
+					<dd><pre>/Users/camdennarzt/.rbenv/shims/ruby</pre></dd>
+				
+				<dt>User and groups</dt>
+				<dd><pre>uid=<wbr>501(camdennarzt) gid=<wbr>20(staff) groups=<wbr>20(staff),<wbr>12(everyone),<wbr>61(localaccounts),<wbr>79(_appserverusr),<wbr>80(admin),<wbr>81(_appserveradm),<wbr>98(_lpadmin),<wbr>401(com.apple.sharepoint.group.1),<wbr>206(com.apple.access_loginwindow),<wbr>33(_appstore),<wbr>100(_lpoperator),<wbr>204(_developer),<wbr>398(com.apple.access_screensharing),<wbr>399(com.apple.access_ssh)
+</pre></dd>
+				<dt>Environment variables</dt>
+				<dd><pre>RBENV_VERSION =<wbr> 2.2.2
+SHELL =<wbr> /usr/local/bin/bash
+PYTHONUNBUFFERED =<wbr> 1
+PASSENGER_DEBUG_DIR =<wbr> /tmp/passenger.spawn-debug.ZgVxNmEJba
+OLDPWD =<wbr> /usr/local/Cellar/rbenv-gem-rehash/1.0.0
+USER =<wbr> camdennarzt
+RBENV_ROOT =<wbr> /Users/camdennarzt/.rbenv
+__CF_USER_TEXT_ENCODING =<wbr> 0x1F5:<wbr>0x0:<wbr>0x0
+IN_PASSENGER =<wbr> 1
+RACK_ENV =<wbr> development
+RBENV_HOOK_PATH =<wbr> :<wbr>/Users/camdennarzt/.rbenv/rbenv.d:<wbr>/usr/local/etc/rbenv.d:<wbr>/etc/rbenv.d:<wbr>/usr/lib/rbenv/hooks
+PASSENGER_USE_FEEDBACK_FD =<wbr> true
+PATH =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bin:<wbr>/Users/camdennarzt/.rbenv/versions/2.2.2/bin:<wbr>/usr/local/Cellar/rbenv/0.4.0/libexec:<wbr>/usr/local/bin:<wbr>/usr/bin:<wbr>/bin:<wbr>/usr/sbin:<wbr>/sbin:<wbr>/opt/X11/bin:<wbr>/usr/texbin
+WSGI_ENV =<wbr> development
+PWD =<wbr> /Users/camdennarzt/Sites/arewesmallyet
+NODE_PATH =<wbr> /usr/local/Cellar/passenger/5.0.10/libexec/node_lib
+XPC_FLAGS =<wbr> 0x80
+NODE_ENV =<wbr> development
+XPC_SERVICE_NAME =<wbr> 0
+HOME =<wbr> /Users/camdennarzt
+SHLVL =<wbr> 0
+RAILS_ENV =<wbr> development
+RBENV_DIR =<wbr> /usr/local/Cellar/passenger/5.0.10/libexec/helper-scripts
+SERVER_SOFTWARE =<wbr> Apache/2.4.10 (Unix) Phusion_Passenger/5.0.10
+LOGNAME =<wbr> camdennarzt
+XPC_SERVICES_UNAVAILABLE =<wbr> 1
+PASSENGER_APP_ENV =<wbr> development
+RUBYLIB =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib:<wbr>/usr/local/Cellar/rbenv-gem-rehash/1.0.0
+GEM_PATH =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0:<wbr>/Users/camdennarzt/.gem/ruby/2.2.0
+GEM_HOME =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0
+BUNDLE_BIN_PATH =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/bin/bundle
+BUNDLE_GEMFILE =<wbr> /Users/camdennarzt/Developer/Ruby/arewesmallyet/Gemfile
+RUBYOPT =<wbr> -rbundler/setup
+</pre></dd>
+				<dt>Ulimits</dt>
+				<dd><pre>core file size          (blocks,<wbr> -c) 0
+data seg size           (kbytes,<wbr> -d) unlimited
+file size               (blocks,<wbr> -f) unlimited
+max locked memory       (kbytes,<wbr> -l) unlimited
+max memory size         (kbytes,<wbr> -m) unlimited
+open files                      (-n) 256
+pipe size            (512 bytes,<wbr> -p) 1
+stack size              (kbytes,<wbr> -s) 8192
+cpu time               (seconds,<wbr> -t) unlimited
+max user processes              (-u) 709
+virtual memory          (kbytes,<wbr> -v) unlimited
+</pre></dd>
+				
+					<dt>System metrics</dt>
+					<dd><pre>------------- General -------------
+Kernel version    :<wbr> 14.3.0
+Uptime            :<wbr> 18h 44m 39s
+Load averages     :<wbr> 3.23%,<wbr> 4.01%,<wbr> 3.74%
+
+------------- CPU -------------
+Number of CPUs    :<wbr>    8
+Average CPU usage :<wbr>  14%  --  12% user,<wbr>   0% nice,<wbr>   2% system,<wbr>  86% idle
+  CPU 1           :<wbr>   0%  --   0% user,<wbr>   0% nice,<wbr>   0% system,<wbr> 100% idle
+  CPU 2           :<wbr>   0%  --   0% user,<wbr>   0% nice,<wbr>   0% system,<wbr> 100% idle
+  CPU 3           :<wbr>  20%  --   0% user,<wbr>   0% nice,<wbr>  20% system,<wbr>  80% idle
+  CPU 4           :<wbr>   0%  --   0% user,<wbr>   0% nice,<wbr>   0% system,<wbr> 100% idle
+  CPU 5           :<wbr>  20%  --  20% user,<wbr>   0% nice,<wbr>   0% system,<wbr>  80% idle
+  CPU 6           :<wbr>   0%  --   0% user,<wbr>   0% nice,<wbr>   0% system,<wbr> 100% idle
+  CPU 7           :<wbr>  75%  --  75% user,<wbr>   0% nice,<wbr>   0% system,<wbr>  25% idle
+  CPU 8           :<wbr>   0%  --   0% user,<wbr>   0% nice,<wbr>   0% system,<wbr> 100% idle
+
+------------- Memory -------------
+RAM total         :<wbr>  16384 MB
+RAM used          :<wbr>   7768 MB (47%)
+RAM free          :<wbr>   8615 MB
+Swap total        :<wbr>      0 MB
+Swap used         :<wbr>      0 MB (nan%)
+Swap free         :<wbr>      0 MB
+
+</pre></dd>
+				
+				
+					<dt>General Ruby interpreter information</dt>
+					<dd><pre>RUBY_VERSION =<wbr> 2.2.2
+RUBY_PLATFORM =<wbr> x86_64-darwin14
+RUBY_ENGINE =<wbr> ruby
+RubyGems version =<wbr> 2.4.5
+RubyGems paths =<wbr> [&quot;/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0&quot;,<wbr> &quot;/Users/camdennarzt/.gem/ruby/2.2.0&quot;]
+</pre></dd>
+				
+				
+					<dt>Ruby configuration (RbConfig::CONFIG)</dt>
+					<dd><pre>DESTDIR =<wbr> 
+MAJOR =<wbr> 2
+MINOR =<wbr> 2
+TEENY =<wbr> 0
+PATCHLEVEL =<wbr> 95
+INSTALL =<wbr> /usr/bin/install -c
+EXEEXT =<wbr> 
+prefix =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2
+ruby_install_name =<wbr> ruby
+RUBY_INSTALL_NAME =<wbr> ruby
+RUBY_SO_NAME =<wbr> ruby
+exec =<wbr> exec
+ruby_pc =<wbr> ruby-2.2.pc
+PACKAGE =<wbr> ruby
+BUILTIN_TRANSSRCS =<wbr>  newline.c
+USE_RUBYGEMS =<wbr> YES
+MANTYPE =<wbr> doc
+NROFF =<wbr> /usr/bin/nroff
+vendorarchhdrdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/include/ruby-2.2.0/vendor_ruby/x86_64-darwin14
+sitearchhdrdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/include/ruby-2.2.0/site_ruby/x86_64-darwin14
+rubyarchhdrdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/include/ruby-2.2.0/x86_64-darwin14
+vendorhdrdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/include/ruby-2.2.0/vendor_ruby
+sitehdrdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/include/ruby-2.2.0/site_ruby
+rubyhdrdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/include/ruby-2.2.0
+RUBY_SEARCH_PATH =<wbr> 
+UNIVERSAL_INTS =<wbr> 
+UNIVERSAL_ARCHNAMES =<wbr> 
+configure_args =<wbr>  &apos;--prefix=<wbr>/Users/camdennarzt/.rbenv/versions/2.2.2&apos; &apos;--with-openssl-dir=<wbr>/usr/local/opt/openssl&apos; &apos;--with-readline-dir=<wbr>/usr/local/opt/readline&apos; &apos;CC=<wbr>clang&apos; &apos;CFLAGS=<wbr> -O3 -Wno-error=<wbr>shorten-64-to-32 &apos; &apos;LDFLAGS=<wbr>-L/Users/camdennarzt/.rbenv/versions/2.2.2/lib &apos; &apos;CPPFLAGS=<wbr>-I/Users/camdennarzt/.rbenv/versions/2.2.2/include &apos;
+vendorarchdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14
+vendorlibdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0
+vendordir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby
+sitearchdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0/x86_64-darwin14
+sitelibdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0
+sitedir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/site_ruby
+rubyarchdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14
+rubylibdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0
+ruby_version =<wbr> 2.2.0
+sitearch =<wbr> x86_64-darwin14
+arch =<wbr> x86_64-darwin14
+sitearchincludedir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/include/x86_64-darwin14
+archincludedir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/include/x86_64-darwin14
+sitearchlibdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/x86_64-darwin14
+archlibdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/x86_64-darwin14
+libdirname =<wbr> libdir
+RUBY_EXEC_PREFIX =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2
+RUBY_LIB_VERSION =<wbr> 
+RUBY_LIB_VERSION_STYLE =<wbr> 3	/* full */
+RI_BASE_NAME =<wbr> ri
+ridir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/share/ri
+rubysitearchprefix =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/x86_64-darwin14
+rubyarchprefix =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/x86_64-darwin14
+MAKEFILES =<wbr> Makefile GNUmakefile
+PLATFORM_DIR =<wbr> 
+THREAD_MODEL =<wbr> pthread
+SYMBOL_PREFIX =<wbr> _
+EXPORT_PREFIX =<wbr> 
+COMMON_HEADERS =<wbr> 
+COMMON_MACROS =<wbr> 
+COMMON_LIBS =<wbr> 
+MAINLIBS =<wbr> 
+ENABLE_SHARED =<wbr> no
+DLDLIBS =<wbr> 
+SOLIBS =<wbr> 
+LIBRUBYARG_SHARED =<wbr> 
+LIBRUBYARG_STATIC =<wbr> -lruby-static -framework CoreFoundation
+LIBRUBYARG =<wbr> -lruby-static -framework CoreFoundation
+LIBRUBY =<wbr> libruby-static.a
+LIBRUBY_ALIASES =<wbr> libruby.so
+LIBRUBY_SO =<wbr> libruby.so.2.2.0
+LIBRUBY_A =<wbr> libruby-static.a
+RUBYW_INSTALL_NAME =<wbr> 
+rubyw_install_name =<wbr> 
+EXTDLDFLAGS =<wbr> 
+EXTLDFLAGS =<wbr> 
+strict_warnflags =<wbr> 
+warnflags =<wbr> -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
+debugflags =<wbr> -ggdb3
+optflags =<wbr> -O3 -fno-fast-math
+cxxflags =<wbr>  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
+cflags =<wbr>  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
+cppflags =<wbr> 
+NULLCMD =<wbr> :<wbr>
+DLNOBJ =<wbr> dln.o
+INSTALLDOC =<wbr> all
+CAPITARGET =<wbr> nodoc
+RDOCTARGET =<wbr> rdoc
+DTRACE_REBUILD =<wbr> 
+DTRACE_OBJ =<wbr> 
+DTRACE_EXT =<wbr> d
+EXECUTABLE_EXTS =<wbr> 
+ARCHFILE =<wbr> 
+LIBRUBY_RELATIVE =<wbr> no
+EXTOUT =<wbr> .ext
+RUNRUBY_COMMAND =<wbr> $(MINIRUBY) $(srcdir)/tool/runruby.rb --extout=<wbr>.ext $(RUNRUBYOPT)
+PREP =<wbr> miniruby
+BTESTRUBY =<wbr> $(MINIRUBY)
+CROSS_COMPILING =<wbr> no
+TEST_RUNNABLE =<wbr> yes
+rubylibprefix =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby
+setup =<wbr> Setup
+ENCSTATIC =<wbr> 
+EXTSTATIC =<wbr> 
+STRIP =<wbr> strip -A -n
+TRY_LINK =<wbr> 
+LIBPATHENV =<wbr> DYLD_LIBRARY_PATH
+RPATHFLAG =<wbr> 
+LIBPATHFLAG =<wbr>  -L%s
+LINK_SO =<wbr> 
+test -z &apos;$(RUBY_CODESIGN)&apos; || codesign -s &apos;$(RUBY_CODESIGN)&apos; -f $@
+ASMEXT =<wbr> S
+LIBEXT =<wbr> a
+DLEXT2 =<wbr> 
+DLEXT =<wbr> bundle
+LDSHAREDXX =<wbr> clang++ -dynamic -bundle
+LDSHARED =<wbr> clang -dynamic -bundle
+CCDLFLAGS =<wbr> -fno-common
+STATIC =<wbr> 
+ARCH_FLAG =<wbr> 
+DLDFLAGS =<wbr> -Wl,<wbr>-undefined,<wbr>dynamic_lookup -Wl,<wbr>-multiply_defined,<wbr>suppress
+ALLOCA =<wbr> 
+codesign =<wbr> codesign
+POSTLINK =<wbr> test -z &apos;$(RUBY_CODESIGN)&apos; || codesign -s &apos;$(RUBY_CODESIGN)&apos; -f $@
+WERRORFLAG =<wbr> -Werror
+CHDIR =<wbr> cd -P
+RMALL =<wbr> rm -fr
+RMDIRS =<wbr> rmdir -p
+RMDIR =<wbr> rmdir
+CP =<wbr> cp
+RM =<wbr> rm -f
+PKG_CONFIG =<wbr> pkg-config
+PYTHON =<wbr> 
+DOXYGEN =<wbr> 
+DOT =<wbr> 
+DTRACE =<wbr> dtrace
+MAKEDIRS =<wbr> mkdir -p
+MKDIR_P =<wbr> mkdir -p
+INSTALL_DATA =<wbr> /usr/bin/install -c -m 644
+INSTALL_SCRIPT =<wbr> /usr/bin/install -c
+INSTALL_PROGRAM =<wbr> /usr/bin/install -c
+SET_MAKE =<wbr> 
+LN_S =<wbr> ln -s
+NM =<wbr> nm
+DLLWRAP =<wbr> 
+WINDRES =<wbr> 
+OBJCOPY =<wbr> :<wbr>
+OBJDUMP =<wbr> 
+ASFLAGS =<wbr> 
+AS =<wbr> as
+AR =<wbr> ar
+RANLIB =<wbr> ranlib
+try_header =<wbr> 
+CC_VERSION =<wbr> clang -v
+COUTFLAG =<wbr> -o 
+OUTFLAG =<wbr> -o 
+CPPOUTFILE =<wbr> -o conftest.i
+GNU_LD =<wbr> no
+LD =<wbr> ld
+GCC =<wbr> yes
+EGREP =<wbr> /usr/bin/grep -E
+GREP =<wbr> /usr/bin/grep
+CPP =<wbr> clang -E
+CXXFLAGS =<wbr>  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens
+OBJEXT =<wbr> o
+CPPFLAGS =<wbr> -I/Users/camdennarzt/.rbenv/versions/2.2.2/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT  
+LDFLAGS =<wbr> -L. -L/Users/camdennarzt/.rbenv/versions/2.2.2/lib  -fstack-protector
+CFLAGS =<wbr>  -O3 -Wno-error=<wbr>shorten-64-to-32  -pipe
+CXX =<wbr> clang++
+CC =<wbr> clang
+NACL_LIB_PATH =<wbr> 
+NACL_SDK_VARIANT =<wbr> 
+NACL_SDK_ROOT =<wbr> 
+NACL_TOOLCHAIN =<wbr> 
+target_os =<wbr> darwin14
+target_vendor =<wbr> apple
+target_cpu =<wbr> x86_64
+target =<wbr> x86_64-apple-darwin14
+host_os =<wbr> darwin14.3.0
+host_vendor =<wbr> apple
+host_cpu =<wbr> x86_64
+host =<wbr> x86_64-apple-darwin14.3.0
+RUBY_VERSION_NAME =<wbr> ruby-2.2.0
+RUBYW_BASE_NAME =<wbr> rubyw
+RUBY_BASE_NAME =<wbr> ruby
+build_os =<wbr> darwin14.3.0
+build_vendor =<wbr> apple
+build_cpu =<wbr> x86_64
+build =<wbr> x86_64-apple-darwin14.3.0
+RUBY_PROGRAM_VERSION =<wbr> 2.2.2
+HAVE_BASERUBY =<wbr> yes
+target_alias =<wbr> 
+host_alias =<wbr> 
+build_alias =<wbr> 
+LIBS =<wbr> -lpthread -ldl -lobjc
+ECHO_T =<wbr> 
+ECHO_N =<wbr> 
+ECHO_C =<wbr> \\c
+DEFS =<wbr> 
+mandir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/share/man
+localedir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/share/locale
+libdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib
+psdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/share/doc/ruby
+pdfdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/share/doc/ruby
+dvidir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/share/doc/ruby
+htmldir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/share/doc/ruby
+infodir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/share/info
+docdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/share/doc/ruby
+oldincludedir =<wbr> /usr/include
+includedir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/include
+localstatedir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/var
+sharedstatedir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/com
+sysconfdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/etc
+datadir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/share
+datarootdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/share
+libexecdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/libexec
+sbindir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/sbin
+bindir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/bin
+exec_prefix =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2
+PACKAGE_URL =<wbr> 
+PACKAGE_BUGREPORT =<wbr> 
+PACKAGE_STRING =<wbr> 
+PACKAGE_VERSION =<wbr> 
+PACKAGE_TARNAME =<wbr> 
+PACKAGE_NAME =<wbr> 
+PATH_SEPARATOR =<wbr> :<wbr>
+SHELL =<wbr> /bin/sh
+archdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14
+topdir =<wbr> /Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14
+</pre></dd>
+				
+				
+					<dt>Activated Ruby gems</dt>
+					<dd><pre>bundler =<wbr>&gt; 1.10.3
+rake =<wbr>&gt; 10.4.2
+i18n =<wbr>&gt; 0.7.0
+json =<wbr>&gt; 1.8.3
+minitest =<wbr>&gt; 5.7.0
+thread_safe =<wbr>&gt; 0.3.5
+tzinfo =<wbr>&gt; 1.2.2
+activesupport =<wbr>&gt; 4.2.1
+builder =<wbr>&gt; 3.2.2
+mime-types =<wbr>&gt; 1.25.1
+mini_portile =<wbr>&gt; 0.6.2
+nokogiri =<wbr>&gt; 1.6.6.2
+rack =<wbr>&gt; 1.5.3
+rack-test =<wbr>&gt; 0.6.3
+xpath =<wbr>&gt; 2.0.0
+capybara =<wbr>&gt; 2.4.4
+capybara-webkit =<wbr>&gt; 1.5.1
+coffee-script-source =<wbr>&gt; 1.9.1.1
+execjs =<wbr>&gt; 2.5.2
+coffee-script =<wbr>&gt; 2.4.1
+multi_json =<wbr>&gt; 1.11.0
+gherkin =<wbr>&gt; 2.12.2
+cucumber-core =<wbr>&gt; 1.1.3
+diff-lcs =<wbr>&gt; 1.2.5
+multi_test =<wbr>&gt; 0.1.2
+cucumber =<wbr>&gt; 2.0.0
+flamegraph =<wbr>&gt; 0.1.0
+tilt =<wbr>&gt; 1.4.1
+haml =<wbr>&gt; 4.0.6
+hike =<wbr>&gt; 1.2.3
+url_mount =<wbr>&gt; 0.2.1
+http_router =<wbr>&gt; 0.11.1
+jsmin =<wbr>&gt; 1.0.1
+polyglot =<wbr>&gt; 0.3.5
+treetop =<wbr>&gt; 1.4.15
+mail =<wbr>&gt; 2.5.4
+moneta =<wbr>&gt; 0.7.20
+open_uri_redirections =<wbr>&gt; 0.2.1
+padrino-support =<wbr>&gt; 0.12.5
+rack-protection =<wbr>&gt; 1.5.3
+sinatra =<wbr>&gt; 1.4.6
+thor =<wbr>&gt; 0.19.1
+padrino-core =<wbr>&gt; 0.12.5
+padrino-helpers =<wbr>&gt; 0.12.5
+padrino-admin =<wbr>&gt; 0.12.5
+padrino-cache =<wbr>&gt; 0.12.5
+padrino-gen =<wbr>&gt; 0.12.5
+padrino-mailer =<wbr>&gt; 0.12.5
+padrino =<wbr>&gt; 0.12.5
+sass =<wbr>&gt; 3.4.14
+sinatra-assetpack =<wbr>&gt; 0.3.3
+sprockets =<wbr>&gt; 2.12.3
+uglifier =<wbr>&gt; 2.7.1
+padrino-pipeline =<wbr>&gt; 0.4.0
+pg =<wbr>&gt; 0.18.2
+rack-mini-profiler =<wbr>&gt; 0.9.3
+sequel =<wbr>&gt; 4.23.0
+stackprof =<wbr>&gt; 0.2.7
+</pre></dd>
+				
+				
+					<dt>Ruby load path ($LOAD_PATH)</dt>
+					<dd><pre>/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/extensions/x86_64-darwin-14/2.2.0-static/stackprof-0.2.7
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/stackprof-0.2.7/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/extensions/x86_64-darwin-14/2.2.0-static/pg-0.18.2
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/pg-0.18.2/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-pipeline-0.4.0/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/uglifier-2.7.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sprockets-2.12.3/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sinatra-assetpack-0.3.3/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-0.12.5/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-mailer-0.12.5/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-gen-0.12.5/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-cache-0.12.5/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-admin-0.12.5/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/thor-0.19.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sinatra-1.4.6/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-protection-1.5.3/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-support-0.12.5/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/open_uri_redirections-0.2.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/moneta-0.7.20/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/mail-2.5.4/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/treetop-1.4.15/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/polyglot-0.3.5/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/jsmin-1.0.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/url_mount-0.2.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/hike-1.2.3/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/flamegraph-4000b02cb3d0/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/cucumber-2.0.0/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/multi_test-0.1.2/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/diff-lcs-1.2.5/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/cucumber-core-1.1.3/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/extensions/x86_64-darwin-14/2.2.0-static/gherkin-2.12.2
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/gherkin-2.12.2/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/multi_json-1.11.0/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/coffee-script-2.4.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/execjs-2.5.2/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/coffee-script-source-1.9.1.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/extensions/x86_64-darwin-14/2.2.0-static/capybara-webkit-1.5.1
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/capybara-webkit-1.5.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/capybara-2.4.4/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/xpath-2.0.0/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-test-0.6.3/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/extensions/x86_64-darwin-14/2.2.0-static/nokogiri-1.6.6.2
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/nokogiri-1.6.6.2/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/mini_portile-0.6.2/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/mime-types-1.25.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/builder-3.2.2/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/thread_safe-0.3.5/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/minitest-5.7.0/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/extensions/x86_64-darwin-14/2.2.0-static/json-1.8.3
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/json-1.8.3/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/i18n-0.7.0/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rake-10.4.2/lib
+/usr/local/Cellar/rbenv-gem-rehash/1.0.0
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0/x86_64-darwin14
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/site_ruby
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14
+</pre></dd>
+				
+				
+					<dt>Ruby loaded libraries ($LOADED_FEATURES)</dt>
+					<dd><pre>enumerator.so
+rational.so
+complex.so
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/enc/encdb.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/enc/trans/transdb.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/unicode_normalize.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/rbconfig.rb
+thread.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/thread.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/compatibility.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/defaults.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/deprecate.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/errors.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/requirement.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/platform.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/basic_specification.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/stub_specification.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/util/stringio.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/specification.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/exceptions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_gem.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/monitor.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/constants.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/etc.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/fileutils.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/tmpdir.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/utils/tmpio.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/platform_info.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/platform_info/operating_system.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/platform_info/ruby.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/platform_info/binary_compatibility.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/buildout/ruby/ruby-2.2.2-x86_64-macosx/passenger_native_support.bundle
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/native_support.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/socket.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/socket.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/ruby_core_enhancements.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/ruby_core_io_enhancements.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/utils.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/preloader_shared_helpers.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/public_api.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/debug_logging.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/shellwords.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/utils/shellwords.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/loader_shared_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/fcntl.bundle
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/message_channel.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/message_client.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/utils/native_support_utils.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/utils/unseekable_socket.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/request_handler/thread_handler.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/request_handler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/stringio.bundle
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/utils/tee_input.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/rack/thread_handler_extension.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/path_support.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/union_station/connection.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/union_station/transaction.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/utils/lock.rb
+/usr/local/Cellar/passenger/5.0.10/libexec/lib/phusion_passenger/union_station/core.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/dependency.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/pathname.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/pathname.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/constants.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/io/console.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/user_interaction.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/config_file.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/ext/build_error.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/ext/builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/ext/configure_builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/delegate.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/tempfile.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/ext/ext_conf_builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/ext/rake_builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/optparse.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/command.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/ext/cmake_builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/ext.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/rubygems_integration.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/current_ruby.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/shared_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/gem_path_manipulation.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/gem_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/match_platform.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/rubygems_ext.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri/rfc2396_parser.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri/rfc3986_parser.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri/common.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri/generic.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri/ftp.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri/http.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri/https.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri/ldap.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri/ldaps.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri/mailto.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/uri.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/settings.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/digest.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/digest.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/digest/sha1.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/set.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/definition.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/dependency.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/ruby_dsl.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/dsl.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/source_list.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/source.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/timeout.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/net/protocol.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/zlib.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/net/http/exceptions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/net/http/header.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/enc/windows_31j.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/net/http/generic_request.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/net/http/request.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/net/http/requests.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/net/http/response.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/net/http/responses.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/net/http/proxy_delta.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/net/http/backward.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/net/http.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/date_core.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/date.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/time.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/request/http_pool.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/request/https_pool.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/request/connection_pools.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/request.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/cgi/core.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/cgi/util.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/cgi/cookie.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/cgi.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/uri_formatter.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/openssl.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/openssl/bn.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/openssl/cipher.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/openssl/config.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/openssl/digest.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/openssl/x509.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/openssl/buffering.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/openssl/ssl.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/openssl.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/securerandom.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/resolv.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/remote_fetcher.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/text.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/name_tuple.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rubygems/spec_fetcher.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/source/rubygems.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/source/path.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/source/git.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/strscan.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/lockfile_parser.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/lazy_specification.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/tsort.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/forwardable.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/spec_set.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/environment.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/runtime.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/dep_proxy.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/index.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/remote_specification.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/stub_specification.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/endpoint_specification.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/source/git/git_proxy.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/ui.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/ui/silent.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/ui/rg_proxy.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bundler-1.10.3/lib/bundler/setup.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack/multipart.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack/utils.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack/builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/singleton.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/ostruct.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/ext/module.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/ext/core.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/ext/string.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/early_time.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/late_time.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/ext/time.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/alt_system.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/win32.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/linked_list.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/cpu_counter.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/scope.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/task_argument_error.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/rule_recursion_overflow_error.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/task_manager.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/cloneable.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/file_utils.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/file_utils_ext.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/pathmap.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/file_list.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/promise.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/thread_pool.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/private_reader.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/thread_history_display.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/trace_output.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/application.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/rake_module.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/pseudo_status.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/task_arguments.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/invocation_chain.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/invocation_exception_mixin.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/task.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/file_task.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/file_creation_task.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/multi_task.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/dsl_definition.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/default_loader.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/name_space.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake/backtrace.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/rake.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/erb.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/util.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/parser.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/compiler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/options.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/buffer.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/template.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/string.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/erb.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/etanni.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/haml.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/css.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/csv.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/coffee.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/nokogiri.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/markaby.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/liquid.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/radius.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/markdown.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/textile.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/rdoc.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/wiki.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/yajl.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/asciidoc.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt/plain.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tilt-1.4.1/lib/tilt.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/filters.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/error.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/engine.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/bigdecimal.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/deprecated.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/sql.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/exceptions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset/query.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset/actions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset/features.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset/graph.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset/prepared_statements.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset/misc.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset/mutation.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset/sql.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset/placeholder_literalizer.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/dataset.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/connecting.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/dataset.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/dataset_defaults.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/logging.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/features.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/misc.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/query.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/transactions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/schema_generator.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database/schema_methods.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/database.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/timezones.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/ast_transformer.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/core.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/model/default_inflections.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/model/inflections.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/model/plugins.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/model/dataset_module.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/model/base.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/model/exceptions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/model/errors.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/model/associations.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/model.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/extensions/x86_64-darwin-14/2.2.0-static/pg-0.18.2/pg_ext.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/pg-0.18.2/lib/pg/exceptions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/pg-0.18.2/lib/pg/constants.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/pg-0.18.2/lib/pg/coder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/pg-0.18.2/lib/pg/text_encoder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/pg-0.18.2/lib/pg/text_decoder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/pg-0.18.2/lib/pg/basic_type_mapping.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/pg-0.18.2/lib/pg/type_map_by_column.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/pg-0.18.2/lib/pg/connection.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/pg-0.18.2/lib/pg/result.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/pg-0.18.2/lib/pg.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/module/aliasing.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/hash/reverse_merge.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/hash/keys.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/hash_with_indifferent_access.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/hash/indifferent_access.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/hash/slice.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/array/extract_options.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/object/blank.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/kernel/singleton_class.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/module/delegation.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/deprecation/instance_delegator.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/notifications/instrumenter.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/mutex_m.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/thread_safe-0.3.5/lib/thread_safe/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/thread_safe-0.3.5/lib/thread_safe/synchronized_delegator.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/thread_safe-0.3.5/lib/thread_safe.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/notifications/fanout.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/per_thread_registry.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/thread_safe-0.3.5/lib/thread_safe/non_concurrent_cache_backend.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/thread_safe-0.3.5/lib/thread_safe/mri_cache_backend.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/thread_safe-0.3.5/lib/thread_safe/cache.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/notifications.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/deprecation/behaviors.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/deprecation/reporting.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/deprecation/method_wrappers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/array/prepend_and_append.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/hash/deep_merge.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/hash/except.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/i18n-0.7.0/lib/i18n/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/i18n-0.7.0/lib/i18n/exceptions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/i18n-0.7.0/lib/i18n/interpolate/ruby.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/i18n-0.7.0/lib/i18n.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/lazy_load_hooks.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/i18n-0.7.0/lib/i18n/config.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/i18n.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/inflector/inflections.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/inflections.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/inflector/methods.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/deprecation/proxy_wrappers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/module/deprecation.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/deprecation.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/string/output_safety.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-support-0.12.5/lib/padrino-support/core_ext/string/inflections.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-support-0.12.5/lib/padrino-support/core_ext/string/colorize.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-support-0.12.5/lib/padrino-support/core_ext/string/undent.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-support-0.12.5/lib/padrino-support/core_ext/object_space.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-support-0.12.5/lib/padrino-support/file_set.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-support-0.12.5/lib/padrino-support.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-protection-1.5.3/lib/rack/protection/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-protection-1.5.3/lib/rack/protection.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack/request.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack/showexceptions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sinatra-1.4.6/lib/sinatra/show_exceptions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sinatra-1.4.6/lib/sinatra/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack/response.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack/body_proxy.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack/commonlogger.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sinatra-1.4.6/lib/sinatra/base.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/application/flash.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/ext/sinatra.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/url_mount-0.2.1/lib/url_mount.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/node.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/request.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/response.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/route.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/generator.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/route_helper.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/generation_helper.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/regex_route_generation.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/util.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/node/glob.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/node/regex.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/node/spanning_regex.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/node/path.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/http_router-0.11.1/lib/http_router/node/free_regex.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/ext/http_router.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/filter.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/application/routing.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/application/show_exceptions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/logger.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-protection-1.5.3/lib/rack/protection/base.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-protection-1.5.3/lib/rack/protection/authenticity_token.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/application/authenticity_token.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/application/application_setup.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/object/duplicable.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/object/deep_dup.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/application/params_protection.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/application.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/caller.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/command.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/loader.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/logger.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/mounter.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/reloader/rack.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/reloader/storage.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/reloader.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/router.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-1.5.3/lib/rack/server.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/server.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/tasks.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core/module.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-core-0.12.5/lib/padrino-core.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-mailer-0.12.5/lib/padrino-mailer.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/ruby_core_support.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/offset_rationals.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/time_or_datetime.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/timezone_definition.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/timezone_offset.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/timezone_transition.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/timezone_transition_definition.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/timezone_index_definition.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/timezone_info.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/data_timezone_info.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/linked_timezone_info.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/transition_data_timezone_info.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/zoneinfo_timezone_info.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/data_source.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/ruby_data_source.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/zoneinfo_data_source.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/timezone_period.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/timezone.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/info_timezone.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/data_timezone.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/linked_timezone.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/timezone_proxy.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/country_index_definition.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/country_info.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/ruby_country_info.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/zoneinfo_country_info.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/country.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo/country_timezone.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/tzinfo-1.2.2/lib/tzinfo.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/object/try.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/values/time_zone.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/object/acts_like.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/time_with_zone.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/base64.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/multibyte.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/string/multibyte.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/inflector/transliterate.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/string/inflections.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/date_time/calculations.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/kernel/reporting.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/xml_mini/rexml.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/xml_mini.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/object/to_query.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/object/to_param.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/array/conversions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/duration.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/time/conversions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/time/acts_like.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/date_and_time/zones.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/time/zones.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/date_and_time/calculations.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/time/calculations.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/string/conversions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/option_merger.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/object/with_options.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/inflector.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/helpers/xss_mods.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/haml-4.0.6/lib/haml/helpers/action_view_extensions.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino/rendering/haml_template.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino/rendering.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/asset_tag_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/form_builder/deprecated_builder_methods.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/form_builder/abstract_form_builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/form_builder/standard_form_builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/form_helpers/errors.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/form_helpers/options.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/form_helpers/security.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/form_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/format_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/number_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/output_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/output_helpers/abstract_handler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/output_helpers/erb_handler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/output_helpers/haml_handler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/output_helpers/slim_handler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/render_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/tag_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers/translation_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-helpers-0.12.5/lib/padrino-helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/module/attribute_accessors.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/core_ext/class/attribute_accessors.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-admin-0.12.5/lib/padrino-admin/access_control.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-admin-0.12.5/lib/padrino-admin/helpers/authentication_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-admin-0.12.5/lib/padrino-admin/helpers/view_helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-gen-0.12.5/lib/padrino-gen/command.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/exception.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/syntax_error.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/psych.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/omap.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/set.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/class_loader.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/scalar_scanner.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/nodes/node.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/nodes/stream.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/nodes/document.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/nodes/sequence.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/nodes/scalar.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/nodes/mapping.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/nodes/alias.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/nodes.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/streaming.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/visitors/visitor.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/visitors/to_ruby.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/visitors/emitter.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/handler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/tree_builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/visitors/yaml_tree.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/json/ruby_events.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/visitors/json_tree.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/visitors/depth_first.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/visitors.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/parser.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/coder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/core_ext.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/deprecated.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/stream.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/json/yaml_events.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/json/tree_builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/json/stream.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych/handlers/document_stream.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/psych.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/yaml.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.2.1/lib/active_support/ordered_hash.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-gen-0.12.5/lib/padrino-gen.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-admin-0.12.5/lib/padrino-admin.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-cache-0.12.5/lib/padrino-cache/helpers/cache_object.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-cache-0.12.5/lib/padrino-cache/helpers/cache_store.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-cache-0.12.5/lib/padrino-cache/helpers/fragment.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-cache-0.12.5/lib/padrino-cache/helpers/page.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/moneta-0.7.20/lib/moneta.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/moneta-0.7.20/lib/moneta/mixins.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/moneta-0.7.20/lib/moneta/proxy.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-cache-0.12.5/lib/padrino-cache/legacy_store.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/moneta-0.7.20/lib/moneta/adapters/lruhash.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/moneta-0.7.20/lib/moneta/builder.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/moneta-0.7.20/lib/moneta/expires.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/moneta-0.7.20/lib/moneta/transformer/helper.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/moneta-0.7.20/lib/moneta/transformer/config.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/moneta-0.7.20/lib/moneta/transformer.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-cache-0.12.5/lib/padrino-cache.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-0.12.5/lib/padrino.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-pipeline-0.4.0/lib/padrino-pipeline/pipelines/sprockets.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-pipeline-0.4.0/lib/padrino-pipeline/pipelines/asset_pack.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-pipeline-0.4.0/lib/padrino-pipeline/compilers/sprockets.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-pipeline-0.4.0/lib/padrino-pipeline/compilers/asset_pack.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-pipeline-0.4.0/lib/padrino-pipeline/ext/padrino-helpers/asset_tag_helper.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sinatra-assetpack-0.3.3/lib/sinatra/assetpack/helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-pipeline-0.4.0/lib/padrino-pipeline/ext/asset-pack/helpers.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-pipeline-0.4.0/lib/padrino-pipeline/configuration.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/padrino-pipeline-0.4.0/lib/padrino-pipeline.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/json-1.8.3/lib/json/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/json-1.8.3/lib/json/generic_object.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/json-1.8.3/lib/json/common.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/enc/utf_16be.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/enc/utf_16le.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/enc/utf_32be.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14/enc/utf_32le.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/extensions/x86_64-darwin-14/2.2.0-static/json-1.8.3/json/ext/parser.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/extensions/x86_64-darwin-14/2.2.0-static/json-1.8.3/json/ext/generator.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/json-1.8.3/lib/json/ext.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/json-1.8.3/lib/json.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/asset_version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/timer_struct/base.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/timer_struct/page.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/timer_struct/sql.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/timer_struct/custom.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/timer_struct/client.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/timer_struct/request.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/storage/abstract_store.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/storage/memcache_store.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/storage/memory_store.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/storage/redis_store.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/storage/file_store.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/config.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/profiling_methods.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/context.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/client_settings.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/gc_profiler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/mini_profiler/profiler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/patches/db/pg.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/patches/sql_patches.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/patches/net_patches.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rack-mini-profiler-0.9.3/lib/rack-mini-profiler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/extensions/x86_64-darwin-14/2.2.0-static/stackprof-0.2.7/stackprof.bundle
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/flamegraph-4000b02cb3d0/lib/flamegraph/version.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/flamegraph-4000b02cb3d0/lib/flamegraph/renderer.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/flamegraph-4000b02cb3d0/lib/flamegraph/sampler.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/flamegraph-4000b02cb3d0/lib/flamegraph.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/plugins/schema.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/adapters/utils/pg_types.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/adapters/shared/postgres.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/adapters/postgres.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/connection_pool/threaded.rb
+/Users/camdennarzt/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/sequel-4.23.0/lib/sequel/extensions/connection_validator.rb
+</pre></dd>
+				
+				</dl>
+			</div>
+		</div>
+		<div id="site_footer">
+			<!--
+			   You are free to modify the footer as you see fit,
+			   but we kindly ask of you to preserve to following
+			   text. Thank you.
+			-->
+			<div class="container">
+				Powered by <a href="https://www.phusionpassenger.com/">Phusion Passenger</a>,
+				<tt>mod_rails</tt> / <tt>mod_rack</tt> for Apache and Nginx.
+			</div>
+		</div>
+	</div>
+
+</body>
 </html>
+
