@@ -188,7 +188,7 @@ config.ru:<wbr>1:<wbr>in`&lt;main&gt;&apos;
 
 				<dl>
 				<dt>ErrorID</dt>
-				<dd>7ef2e29c</dd>
+				<dd>89c9fb24</dd>
 				<dt>Applicationroot</dt>
 				<dd>/Users/camdennarzt/Sites/arewesmallyet</dd>
 				<dt>Environment(valueofRAILS_ENV,RACK_ENV,WSGI_ENV,NODE_ENVandPASSENGER_APP_ENV)</dt>
@@ -204,7 +204,7 @@ config.ru:<wbr>1:<wbr>in`&lt;main&gt;&apos;
 				<dd><pre>RBENV_VERSION=<wbr>2.2.2
 SHELL=<wbr>/usr/local/bin/bash
 PYTHONUNBUFFERED=<wbr>1
-PASSENGER_DEBUG_DIR=<wbr>/tmp/passenger.spawn-debug.mWPZ3X4ODb
+PASSENGER_DEBUG_DIR=<wbr>/tmp/passenger.spawn-debug.3ERT9azmdu
 OLDPWD=<wbr>/usr/local/Cellar/rbenv-gem-rehash/1.0.0
 USER=<wbr>camdennarzt
 RBENV_ROOT=<wbr>/Users/camdennarzt/.rbenv
@@ -252,28 +252,28 @@ virtualmemory(kbytes,<wbr>-v)unlimited
 					<dt>Systemmetrics</dt>
 					<dd><pre>-------------General-------------
 Kernelversion:<wbr>14.3.0
-Uptime:<wbr>18h44m37s
-Loadaverages:<wbr>3.23%,<wbr>4.01%,<wbr>3.74%
+Uptime:<wbr>1d18h22m50s
+Loadaverages:<wbr>1.27%,<wbr>1.22%,<wbr>1.31%
 
 -------------CPU-------------
 NumberofCPUs:<wbr>8
-AverageCPUusage:<wbr>12%--10%user,<wbr>0%nice,<wbr>2%system,<wbr>87%idle
-CPU1:<wbr>50%--33%user,<wbr>0%nice,<wbr>17%system,<wbr>50%idle
+AverageCPUusage:<wbr>0%--0%user,<wbr>0%nice,<wbr>0%system,<wbr>100%idle
+CPU1:<wbr>0%--0%user,<wbr>0%nice,<wbr>0%system,<wbr>100%idle
 CPU2:<wbr>0%--0%user,<wbr>0%nice,<wbr>0%system,<wbr>100%idle
 CPU3:<wbr>0%--0%user,<wbr>0%nice,<wbr>0%system,<wbr>100%idle
 CPU4:<wbr>0%--0%user,<wbr>0%nice,<wbr>0%system,<wbr>100%idle
 CPU5:<wbr>0%--0%user,<wbr>0%nice,<wbr>0%system,<wbr>100%idle
 CPU6:<wbr>0%--0%user,<wbr>0%nice,<wbr>0%system,<wbr>100%idle
-CPU7:<wbr>50%--50%user,<wbr>0%nice,<wbr>0%system,<wbr>50%idle
+CPU7:<wbr>0%--0%user,<wbr>0%nice,<wbr>0%system,<wbr>100%idle
 CPU8:<wbr>0%--0%user,<wbr>0%nice,<wbr>0%system,<wbr>100%idle
 
 -------------Memory-------------
 RAMtotal:<wbr>16384MB
-RAMused:<wbr>7767MB(47%)
-RAMfree:<wbr>8616MB
-Swaptotal:<wbr>0MB
-Swapused:<wbr>0MB(nan%)
-Swapfree:<wbr>0MB
+RAMused:<wbr>7019MB(43%)
+RAMfree:<wbr>9364MB
+Swaptotal:<wbr>1024MB
+Swapused:<wbr>62MB(6%)
+Swapfree:<wbr>962MB
 
 </pre></dd>
 				
