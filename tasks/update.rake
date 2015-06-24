@@ -18,16 +18,10 @@ class Updater
   }
 
   @@dates = [
-    Date.new(2010,2,7),
-    Date.new(2010,2,12),
-    Date.new(2010,2,13),
-    Date.new(2010,2,14),
-    Date.new(2010,2,15),
-    Date.new(2010,3,3),
-    Date.new(2010,5,8),
-    Date.new(2010,5,9),
-    Date.new(2012,7,7),
-    Date.new(2013,1,22)
+    Date.new(2013,12,29),
+    Date.new(2014,1,1),
+    Date.new(2014,12,24),
+    Date.new(2015,4,1)
   ]
 
   def self.dates=(dates)
