@@ -19,9 +19,7 @@ class Updater
 
   @@dates = [
     Date.new(2013,12,29),
-    Date.new(2014,1,1),
-    Date.new(2014,12,24),
-    Date.new(2015,4,1)
+    Date.new(2014,1,1)
   ]
 
   def self.dates=(dates)
