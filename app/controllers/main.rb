@@ -24,6 +24,7 @@ class Arewesmallyet < Padrino::Application
     'count_linux64', count(data->'linux64'),
     'count_win', count(data->'win'),
     'count_win64', count(data->'win64'),
+    'first_win64', min( case when (data->'win64') is null then null else day end),
     'count_mac', count(data->'mac'),
     'count', count(*),
     'first', min(day),
