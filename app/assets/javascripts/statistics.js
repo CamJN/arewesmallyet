@@ -3,10 +3,11 @@ function statistics() {
   if(window.data){
     var first_data = window.data[window.stats.first];
     var last_data = window.data[window.stats.last];
+    var win64Adjust = (new Date(window.stats.first_win64) - new Date(window.stats.first))/(1000*3600*24)
     Systems.forEach(function(e,i,a){
       window.stats["delta_"+e] = ((last_data[e]-first_data[e])/first_data[e]).toFixed(1)+' ×';
       window.stats["maxima_"+e] = (last_data[e] == window.stats["max_"+e]);
-      window.stats["missing_"+e] = (window.stats.count-window.stats["count_"+e]);
+      window.stats["missing_"+e] = (window.stats.count-window.stats["count_"+e]-(e!='win64'?0:win64Adjust));
       window.stats["max_"+e] = (window.stats["max_"+e]/(1024*1024)).toFixed(1)+' MB';
       window.stats["min_"+e] = (window.stats["min_"+e]/(1024*1024)).toFixed(1)+' MB';
       window.stats["slope_"+e] = window.stats["slope_"+e].toFixed(1)+' B/s';
