@@ -137,17 +137,17 @@ function main() {
       $("#tooltip").remove();
 
       var index = item.dataIndex;
-      var value = Math.round(item.datapoint[1] / 1024);
-      var text = "size: " + value + " kb<br/>";
+      var value = Math.round(item.datapoint[1]*10 / (1024*1024))/10;
+      var text = "size: " + value + " mb<br/>";
 
       if (index > 0) {
-        var prevValue = Math.round(item.series.data[index - 1][1] / 1024);
+        var prevValue = Math.round(item.series.data[index - 1][1]*10 / (1024*1024))/10;
         var diff = Math.round((value - prevValue) * 10) / 10;
         var pdiff = calcPercentDiff(value, prevValue);
         var better = pdiff < 0 ? "worse" : "better";
         pdiff = Math.abs(pdiff);
         if (diff === diff) {
-          text += String.fromCharCode(916) + ": " + diff + " kb";
+          text += String.fromCharCode(916) + ": " + diff + " mb";
           text += " (" + pdiff + "% " + better + ")<br/>";
         }
       }
