@@ -29,7 +29,7 @@ class Updater
   def run
     @@dates = (4.days.ago.to_date .. Date.today).to_a if @@dates.nil?
 
-    Net::FTP.open("ftp.mozilla.org") do |ftp|
+    Net::FTP.open("archive.mozilla.org") do |ftp|
       ftp.passive = true
       ftp.login
 
@@ -102,9 +102,9 @@ def check_versions
     {date_str: Nokogiri::HTML(open(URI.join(page_url,v[:href]).to_s,allow_redirections: :all))
       .css('header.notes-head > h2, #main-feature > h2 > small, #main-feature > p > em').text
       .split(/ (released|users) (on )?/).last,
-      version: v[:text]}
-    end.select{|e| !e[:date_str].nil? }.map do |e|
-      [Date.parse(e[:date_str]).to_s, e[:version].sub(/\.0$/,'')]
-    end.reverse.to_s.prepend('var releaseDates = ').concat(';')
-    File.open('app/assets/javascripts/releases.js', 'w') { |file| file.write(contents) }
-  end
+     version: v[:text]}
+  end.select{|e| !e[:date_str].nil? }.map do |e|
+    [Date.parse(e[:date_str]).to_s, e[:version].sub(/\.0$/,'')]
+  end.reverse.to_s.prepend('var releaseDates = ').concat(';')
+  File.open('app/assets/javascripts/releases.js', 'w') { |file| file.write(contents) }
+end
