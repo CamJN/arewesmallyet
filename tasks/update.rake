@@ -29,7 +29,7 @@ class Updater
   def run
     @@dates = (4.days.ago.to_date .. Date.today).to_a if @@dates.nil?
 
-    Net::FTP.open("archive.mozilla.org") do |ftp|
+    Net::FTP.open("ftp.mozilla.org") do |ftp|
       ftp.passive = true
       ftp.login
 
