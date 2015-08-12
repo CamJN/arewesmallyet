@@ -1,20 +1,20 @@
 require 'date'
 require 'json'
-require 'net/ftp'
+require 'net/http'
+require 'uri'
 require 'active_support/all'
 require 'open-uri'
 require 'open_uri_redirections'
 require 'nokogiri'
 
 class Updater
-  @@root = "/pub/mozilla.org/firefox/nightly"
 
   @@names = {
-    linux: ['*.linux-i686.tar.bz2'],
-    linux64: ['*.linux-x86_64.tar.bz2'],
-    win: ['*.win32.zip', '*.win32.installer.exe'],
-    win64: ['*.win64-x86_64.installer.exe','*.win64-x86_64.zip','*.win64.zip','*.win64.installer.exe'],
-    mac: ['*.mac64.dmg', '*.mac.dmg']
+    linux: [/.*\.linux-i686\.tar\.bz2\z/],
+    linux64: [/.*\.linux-x86_64\.tar\.bz2\z/],
+    win: [/.*\.win32\.zip\z/, /.*\.win32\.installer\.exe\z/],
+    win64: [/.*\.win64-x86_64\.installer\.exe/,/.*\.win64-x86_64\.zip/,/.*\.win64\.zip/,/.*\.win64\.installer\.exe/],
+    mac: [/.*\.mac64\.dmg/, /.*\.mac\.dmg/]
   }
 
   @@dates = [
@@ -29,43 +29,43 @@ class Updater
   def run
     @@dates = (4.days.ago.to_date .. Date.today).to_a if @@dates.nil?
 
-    Net::FTP.open("ftp.mozilla.org") do |ftp|
-      ftp.passive = true
-      ftp.login
-
-      @@dates.each_with_index do |date,i|
-        ftp.chdir date.strftime("#{@@root}/%Y/%m/")
-        pattern = date.strftime("%Y-%m-%d-*-mozilla-central")
-
-        res = ftp.list(pattern)
-        if res
-          self.fetch_current_day(ftp, res, date)
-        end
-        puts "#{100*(i+1)/@@dates.length}% done\n"
+    @@dates.each_with_index do |date,i|
+      date_url = URI("https://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/#{date.strftime('%Y')}/#{date.strftime('%m')}/")
+      links = Nokogiri::HTML(open(date_url.to_s)).css('a').select{|e|
+        e.text.strip =~ Regexp.new(date.strftime("\\A%Y-%m-%d-.+-mozilla-central/\\z"))
+      }.map do |l|
+        fetch_current_day(date_url, l, date)
       end
-
-      ftp.close
+      record_day(date,links)
+      puts "#{100*(i+1)/@@dates.length}% done\n"
     end
   end
 
-  def fetch_current_day(ftp, res_list, date)
-    sizes = {}
-    res_list.each do |res|
-      ftp.chdir("#{ftp.pwd}/#{res.split.last}")
+  def get_size(uri)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true if uri.scheme == 'https'
+    file_size = http.request_head(uri.path)['content-length']
+
+    file_size.to_i
+  end
+
+  def fetch_current_day(date_url, l, date)
+    day_url = URI.join(date_url.to_s,l['href'])
+    reduced = Nokogiri::HTML(open(day_url)).css('a').reduce({}) do |sizes,e|
       @@names.each do |os, suffixes|
         suffixes.each do |sfx|
-          file = ftp.list(sfx).first
-          next unless file
-          size = ftp.size(file.split.last)
-          sizes[os] = size
+          sizes[os] = get_size(URI.join(day_url, e['href'])) if e.text.strip =~ sfx
         end
       end
-      ftp.chdir('..')
+      sizes
     end
+  end
 
+  def record_day(date,data)
     rec = Record.first(day: date)
     rec = Record.new(day: date) unless rec
-
+    sizes = {}.merge(data.pop)
+    data.each { |d| sizes.merge!(d) }
     rec.data = sizes.to_json
     rec.save
   end
