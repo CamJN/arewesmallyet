@@ -202,7 +202,7 @@
                 if (off) {
                     s.oldColor = s.color;
                     s.color = "#fff";
-                    options.legend.hidden.splice(options.legend.hidden.indexOf(s.label), 1);
+                    Array.prototype.push.apply(options.legend.saved_hidden,options.legend.hidden.splice(options.legend.hidden.indexOf(s.label), 1));
                 }
             }
 

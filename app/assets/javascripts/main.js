@@ -51,7 +51,7 @@ function main() {
         mode: "time",
         color: "transparent"
       },
-      legend: {position: "nw",hideable:true},
+      legend: {position: "nw",hideable:true,saved_hidden:[]},
       selection: { mode: "xy" },
       grid: {hoverable: true, clickable: true},
       series: {
@@ -97,11 +97,12 @@ function main() {
     var selecting = false;
     // zooming
     elt.bind("plotselected", function (event, ranges) {
+      var legend = window.flot_plot.getOptions().legend;
       window.flot_plot = $.plot(elt, getDisplays(), $.extend(true, {}, options, {
           xaxis: { min: ranges.xaxis.from, max: ranges.xaxis.to },
           yaxis: { min: ranges.yaxis.from, max: ranges.yaxis.to },
           series: { downsample: { threshold: getMinDistance(elt,ranges) } },
-          legend: { hidden: window.flot_plot.getOptions().legend.hidden }
+          legend: { hidden: legend.hidden.concat(legend.saved_hidden), saved_hidden: [] }
       }));
 
       selecting = true;
