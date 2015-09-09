@@ -1,58 +1,4 @@
 (function () {
-  function limitDataPoints(plot) {
-    var minDistance = 0;
-
-    function getMinDistance(plot) {
-      var series = plot.getData();
-      var xaxis = plot.getAxes().xaxis;
-
-      var values = [];
-      var opts = xaxis.options;
-      var min = opts.min, max = opts.max;
-
-      if (!(min && max)) {
-        series.forEach(function (s) {
-          var count = 0;
-          s.data.forEach(function (d) {
-            d && values.push(d[0]);
-          });
-
-        });
-
-        min = min || Math.min.apply(Math, values);
-        max = max || Math.max.apply(Math, values);
-      }
-
-      var width = $("#graph").width();
-      return 8 * (max - min) / width;
-    }
-
-    plot.hooks.processRawData.push(function (plot, series, data, datapoints) {
-      if (series == plot.getData()[0])
-        minDistance = getMinDistance(plot);
-
-      var lastDate;
-      var values;
-
-      for (var d = data.length - 1; d >= 0; d--) {
-        var date = data[d][0];
-        var value = data[d][1];
-
-        if (lastDate && date + minDistance > lastDate) {
-          data.splice(d, 1);
-          values.push(value);
-        } else {
-          if (lastDate) {
-            values.sort();
-            data[d + 1][1] = values[Math.floor(values.length / 2)];
-          }
-
-          lastDate = date;
-          values = [value];
-        }
-      }
-    });
-  }
 
   function insertReleaseTicks(plot) {
     plot.hooks.draw.push(function (plot, ctx) {
@@ -107,6 +53,5 @@
     });
   }
 
-  $.plot.plugins.push({init: limitDataPoints});
   $.plot.plugins.push({init: insertReleaseTicks});
 })();

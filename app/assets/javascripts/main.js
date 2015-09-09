@@ -1,6 +1,5 @@
 function main() {
   var Systems = ["linux", "linux64", "win", "win64", "mac"];
-  var Graph = {description: "build size", direction: -1};
 
   function calcPercentDiff(currentValue, previousValue) {
     return -Math.round(((currentValue - previousValue) / previousValue) * 1000) / 10;
@@ -32,7 +31,15 @@ function main() {
     });
   }
 
-  function drawGraph(elt, graph) {
+  function getMinDistance(elt,ranges) {
+    var keys = Object.keys(data);
+    var full_rng = new Date(keys[keys.length - 1]) - new Date(keys[0]);
+    var rng = ((typeof ranges == "undefined") ? full_rng : ranges.xaxis.to - ranges.xaxis.from);
+    var scale = rng / full_rng;
+    return (elt.width()/scale)/6;
+  }
+
+  function drawGraph(elt) {
     var options = {
       yaxis: {
         tickDecimals: 2,
@@ -46,7 +53,12 @@ function main() {
       },
       legend: {position: "nw",hideable:true},
       selection: { mode: "x" },
-      grid: {hoverable: true, clickable: true}
+      grid: {hoverable: true, clickable: true},
+      series: {
+        downsample: {
+          threshold: getMinDistance(elt)
+        }
+      }
     };
 
     function showToolTip(x, y, contents) {
@@ -55,7 +67,7 @@ function main() {
       var xOffset = 5;
       var yOffset = 5;
       var ie = document.all && !window.opera;
-      var iebody = (document.compatMode == "CSS1Com[at")
+      var iebody = (document.compatMode == "CSS1Compat")
                    ? document.documentElement
                    : document.body;
       var scrollLeft = ie ? iebody.scrollLeft : window.pageXOffset;
@@ -86,7 +98,8 @@ function main() {
     // zooming
     elt.bind("plotselected", function (event, ranges) {
       $.plot(elt, getDisplays(), $.extend(true, {}, options, {
-          xaxis: { min: ranges.xaxis.from, max: ranges.xaxis.to }
+          xaxis: { min: ranges.xaxis.from, max: ranges.xaxis.to },
+          series: { downsample: { threshold: getMinDistance(elt,ranges) } }
       }));
 
       selecting = true;
@@ -158,5 +171,5 @@ function main() {
     });
   }
 
-  drawGraph($("#graph"), Graph);
+  drawGraph($("#graph"));
 }

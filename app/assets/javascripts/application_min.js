@@ -4,6 +4,7 @@
 //= require jquery.flot.resize.min
 //= require jquery.flot.selection.min
 //= require jquery.flot.hiddengraphs.min
+//= require jquery.flot.downsample.min
 //= require releases
 //= require plugins
 //= require main
