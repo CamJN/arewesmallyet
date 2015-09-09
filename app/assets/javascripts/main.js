@@ -92,15 +92,16 @@ function main() {
       }
     }
 
-    $.plot(elt, getDisplays(), options);
+    window.flot_plot = $.plot(elt, getDisplays(), options);
 
     var selecting = false;
     // zooming
     elt.bind("plotselected", function (event, ranges) {
-      $.plot(elt, getDisplays(), $.extend(true, {}, options, {
+      window.flot_plot = $.plot(elt, getDisplays(), $.extend(true, {}, options, {
           xaxis: { min: ranges.xaxis.from, max: ranges.xaxis.to },
           yaxis: { min: ranges.yaxis.from, max: ranges.yaxis.to },
-          series: { downsample: { threshold: getMinDistance(elt,ranges) } }
+          series: { downsample: { threshold: getMinDistance(elt,ranges) } },
+          legend: { hidden: window.flot_plot.getOptions().legend.hidden }
       }));
 
       selecting = true;
