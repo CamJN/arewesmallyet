@@ -52,7 +52,7 @@ function main() {
         color: "transparent"
       },
       legend: {position: "nw",hideable:true},
-      selection: { mode: "x" },
+      selection: { mode: "xy" },
       grid: {hoverable: true, clickable: true},
       series: {
         downsample: {
@@ -99,6 +99,7 @@ function main() {
     elt.bind("plotselected", function (event, ranges) {
       $.plot(elt, getDisplays(), $.extend(true, {}, options, {
           xaxis: { min: ranges.xaxis.from, max: ranges.xaxis.to },
+          yaxis: { min: ranges.yaxis.from, max: ranges.yaxis.to },
           series: { downsample: { threshold: getMinDistance(elt,ranges) } }
       }));
 
