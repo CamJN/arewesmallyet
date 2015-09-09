@@ -51,7 +51,12 @@ function main() {
         mode: "time",
         color: "transparent"
       },
-      legend: {position: "nw",hideable:true,saved_hidden:[]},
+      legend: {
+        position: "nw",
+        hideable:true,
+        hidden:[],
+        saved_hidden:[]
+      },
       selection: { mode: "xy" },
       grid: {hoverable: true, clickable: true},
       series: {
