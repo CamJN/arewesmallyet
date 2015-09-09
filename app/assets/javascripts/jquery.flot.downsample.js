@@ -69,7 +69,7 @@ THE SOFTWARE.
 
             // Get the range for this bucket
             var range_offs = floor( (i + 0) * every ) + 1,
-                range_to   = floor( (i + 1) * every ) + 1;
+                range_to   = Math.min(floor( (i + 1) * every ) + 1,data_length-1);
 
             // Point a
             var point_a_x = data[ a ][ 0 ] * 1, // enforce Number (value may be Date)
