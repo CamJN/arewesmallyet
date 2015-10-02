@@ -1,9 +1,24 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>403 Forbidden</title>
-</head><body>
-<h1>Forbidden</h1>
-<p>You don't have permission to access /
-on this server.<br />
-</p>
-</body></html>
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <title>ARE WE small YET?</title>
+    <link href="application.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="application.js" async="true" type="text/javascript"></script>
+  </head>
+  <body>
+    <h1>ARE WE <span class='small'>small</span> YET?</h1>
+    <div id='graph-container'>
+      <div id='graph'></div>
+      <span>
+        Lower is better,
+        <a onclick="$('table.hidden').show()">show more stats</a>
+      </span>
+    </div>
+    <div id='here_table'></div>
+    <div id='footer'>
+      <a href="https://github.com/CamJN/arewesmallyet">Sources on GitHub.</a>
+    </div>
+  </body>
+</html>

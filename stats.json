@@ -1,7 +1,1 @@
-<!DOCTYPEHTMLPUBLIC"-//IETF//DTDHTML2.0//EN">
-<html><head>
-<title>404NotFound</title>
-</head><body>
-<h1>NotFound</h1>
-<p>TherequestedURL/stats.jsonwasnotfoundonthisserver.</p>
-</body></html>
+{"max_mac":107473534,"min_mac":14676887,"max_win":55072806,"min_win":12100598,"max_win64":57463074,"min_win64":12145453,"max_linux":59279885,"min_linux":10577658,"max_linux64":58638593,"min_linux64":12038111,"count_linux":2094,"count_linux64":2097,"count_win":2092,"count_win64":1805,"first_win64":"2010-05-28","count_mac":2095,"count":2101,"first":"2010-01-01","last":"2015-10-02","slope_linux":0.302389649298814,"slope_linux64":0.288717999829883,"slope_win":0.211689269701795,"slope_win64":0.22946357725137,"slope_mac":0.494314774844145}
