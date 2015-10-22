@@ -1,1 +1,7 @@
-{"max_mac":110086789,"min_mac":14676887,"max_win":55404558,"min_win":12100598,"max_win64":57586664,"min_win64":12145453,"max_linux":59505246,"min_linux":10577658,"max_linux64":58800204,"min_linux64":12038111,"count_linux":2112,"count_linux64":2115,"count_win":2110,"count_win64":1823,"first_win64":"2010-05-28","count_mac":2113,"count":2119,"first":"2010-01-01","last":"2015-10-20","slope_linux":0.302672209834855,"slope_linux64":0.288831257809985,"slope_win":0.213823049707653,"slope_win64":0.231991587077061,"slope_mac":0.495485043616231}
+Aninternalerroroccurredwhiletryingtospawntheapplication.
+Exceptiontype:Passenger::RuntimeException
+Errormessage:SupportbinaryPassengerAgentnotfound(tried:/usr/local/Cellar/passenger/5.0.20/libexec/buildout/support-binaries/PassengerAgentand/var/root/.passenger/support-binaries/5.0.20/PassengerAgent)
+Backtrace:
+in'voidPassenger::SpawningKit::SmartSpawner::startPreloader()'(SmartSpawner.h:200)
+in'virtualPassenger::SpawningKit::ResultPassenger::SpawningKit::SmartSpawner::spawn(constOptions&)'(SmartSpawner.h:777)
+in'voidPassenger::ApplicationPool2::Group::spawnThreadRealMain(constSpawningKit::SpawnerPtr&,constPassenger::ApplicationPool2::Options&,unsignedint)'(SpawningAndRestarting.cpp:94)
