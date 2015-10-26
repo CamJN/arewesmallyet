@@ -1,7 +1,1 @@
-Aninternalerroroccurredwhiletryingtospawntheapplication.
-Exceptiontype:Passenger::RuntimeException
-Errormessage:SupportbinaryPassengerAgentnotfound(tried:/usr/local/Cellar/passenger/5.0.20/libexec/buildout/support-binaries/PassengerAgentand/var/root/.passenger/support-binaries/5.0.20/PassengerAgent)
-Backtrace:
-in'voidPassenger::SpawningKit::SmartSpawner::startPreloader()'(SmartSpawner.h:200)
-in'virtualPassenger::SpawningKit::ResultPassenger::SpawningKit::SmartSpawner::spawn(constOptions&)'(SmartSpawner.h:777)
-in'voidPassenger::ApplicationPool2::Group::spawnThreadRealMain(constSpawningKit::SpawnerPtr&,constPassenger::ApplicationPool2::Options&,unsignedint)'(SpawningAndRestarting.cpp:94)
+<h2>Incompleteresponsereceivedfromapplication</h2>
