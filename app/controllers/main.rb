@@ -33,7 +33,8 @@ class Arewesmallyet < Padrino::Application
     'slope_linux64', regr_slope((data->>'linux64')::int,EXTRACT(EPOCH FROM day)),
     'slope_win', regr_slope((data->>'win')::int,EXTRACT(EPOCH FROM day)),
     'slope_win64', regr_slope((data->>'win64')::int,EXTRACT(EPOCH FROM day)),
-    'slope_mac', regr_slope((data->>'mac')::int,EXTRACT(EPOCH FROM day))
+    'slope_mac', regr_slope((data->>'mac')::int,EXTRACT(EPOCH FROM day)),
+    'missing_days', ARRAY(SELECT to_char(dates, 'YYYY-MM-DD') FROM generate_series('2009-12-20', CURRENT_DATE, interval '1 day') AS dates WHERE dates NOT IN (SELECT day FROM records))
     ) as jsobj from records;").first[:jsobj]
     # slope is bytes / second
   end
