@@ -16,7 +16,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     builder (3.2.2)
-    capybara (2.7.0)
+    capybara (2.7.1)
       addressable
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -119,7 +119,7 @@ GEM
       rack (>= 1.0)
     rake (11.1.2)
     sass (3.4.22)
-    sequel (4.33.0)
+    sequel (4.34.0)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -169,4 +169,4 @@ DEPENDENCIES
   yui-compressor
 
 BUNDLED WITH
-   1.11.2
+   1.12.1
