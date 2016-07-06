@@ -1,1 +1,7 @@
-{"max_mac":112598632,"min_mac":14676887,"max_win":55404558,"min_win":12100598,"max_win64":58416229,"min_win64":12145453,"max_linux":60490987,"min_linux":10577658,"max_linux64":60348651,"min_linux64":12038111,"count_linux":2367,"count_linux64":2369,"count_win":2365,"count_win64":2076,"first_win64":"2010-05-28","count_mac":2369,"count":2375,"first":"2010-01-01","last":"2016-07-02","slope_linux":0.29011087175671,"slope_linux64":0.276864146724592,"slope_win":0.224592063778605,"slope_win64":0.244337282249593,"slope_mac":0.497208118096103,"missing_days":["2016-07-03"]}
+<!DOCTYPEHTMLPUBLIC"-//IETF//DTDHTML2.0//EN">
+<html><head>
+<title>404NotFound</title>
+</head><body>
+<h1>NotFound</h1>
+<p>TherequestedURL/stats.jsonwasnotfoundonthisserver.</p>
+</body></html>
