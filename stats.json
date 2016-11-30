@@ -1,1 +1,1 @@
-CannotGET/stats.json
+{"max_mac":113293231,"min_mac":14676887,"max_win":55847120,"min_win":12100598,"max_win64":58899829,"min_win64":12145453,"max_linux":61105472,"min_linux":10577658,"max_linux64":61041795,"min_linux64":12038111,"count_linux":2518,"count_linux64":2517,"count_win":2516,"count_win64":2228,"first_win64":"2010-05-28","count_mac":2520,"count":2526,"first":"2010-01-01","last":"2016-11-30","slope_linux":0.281607097391891,"slope_linux64":0.268765831915607,"slope_win":0.223519529587627,"slope_win64":0.242532183537183,"slope_mac":0.485699000728572,"missing_days":[]}
