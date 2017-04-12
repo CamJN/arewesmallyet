@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/CamJN/flamegraph.git
-  revision: 783b9cc99673b8e98b72a9b39859cebf622b01c7
+  revision: 18f63471d8acf720962e64b285d5753d78050d51
   branch: filtering
   specs:
     flamegraph (0.9.5)
@@ -170,4 +170,4 @@ DEPENDENCIES
   yui-compressor
 
 BUNDLED WITH
-   1.13.7
+   1.14.6
