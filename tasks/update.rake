@@ -100,8 +100,8 @@ def check_versions
   page_url = 'https://www.mozilla.org/en-US/firefox/releases/'
   contents = Nokogiri::HTML(open(page_url)).css('#main-content > ol > li > strong > a').map{|e| {text:e.text,href:e['href']} }.map do |v|
     {date_str: Nokogiri::HTML(open(URI.join(page_url,v[:href]).to_s,allow_redirections: :all))
-      .css('header.notes-head > h2, #main-feature > h2 > small, #main-feature > p > em, .version > p:nth-child(3)').text
-      .split(/ (released|users) (on )?/).last,
+       .css('header.notes-head > h2, #main-feature > h2 > small, #main-feature > p > em, .version > p:nth-child(3)').text
+       .split(/ (released|users) (on )?/).last,
      version: v[:text]}
   end.select{|e| !e[:date_str].nil? }.map do |e|
     [Date.parse(e[:date_str]).to_s, e[:version].sub(/\.0$/,'')]
