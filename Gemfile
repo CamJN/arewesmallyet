@@ -16,7 +16,7 @@ gem 'padrino'
 gem 'padrino-pipeline'
 
 group :development do
-
+  gem 'byebug'
   gem 'rack-mini-profiler'
   gem 'stackprof'
   gem 'flamegraph', github: 'CamJN/flamegraph', branch: 'filtering'
