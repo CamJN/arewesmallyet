@@ -1,1 +1,14 @@
-{"max_mac":113293231,"min_mac":14676887,"max_win":139152011,"min_win":12100598,"max_win64":153316126,"min_win64":12145453,"max_linux":75169820,"min_linux":10577658,"max_linux64":68949041,"min_linux64":12038111,"count_linux":3033,"count_linux64":3032,"count_win":3038,"count_win64":2751,"first_win64":"2010-05-28","count_mac":3041,"count":3049,"first":"2010-01-01","last":"2018-05-07","slope_linux":0.245236107652503,"slope_linux64":0.239277897104186,"slope_win":0.202470279729651,"slope_win64":0.219523115686954,"slope_mac":0.281737437647692,"missing_days":[]}
+Anerroroccurredwhilestartingupthepreloader.ItexitedbeforesignallingsuccessfulstartupbacktoPhusionPassenger.Pleaseread<ahref="https://github.com/phusion/passenger/wiki/Debugging-application-startup-problems">thisarticle</a>formoreinformationaboutthisproblem.<br>
+<h2>Rawprocessoutput:</h2>
+<pre>Usage:PassengerAgent&lt;SUBCOMMAND&gt;[options...]
+PhusionPassengerversion5.3.0.
+Type&apos;/Users/camdennarzt/Developer/C++/passenger/buildout/support-binaries/PassengerAgent&lt;SUBCOMMAND&gt;--help&apos;forhelponaspecificsubcommand.
+
+Daemonsubcommands:
+core
+watchdog
+
+Utilitysubcommands:
+system-metrics
+exec-helper
+</pre>
