@@ -1,14 +1,25 @@
-An error occurred while starting up the preloader. It exited before signalling successful startup back to Phusion Passenger. Please read <a href="https://github.com/phusion/passenger/wiki/Debugging-application-startup-problems">this article</a> for more information about this problem.<br>
-<h2>Raw process output:</h2>
-<pre>Usage: PassengerAgent &lt;SUBCOMMAND&gt; [options...]
-Phusion Passenger version 5.3.0.
-Type &apos;/Users/camdennarzt/Developer/C++/passenger/buildout/support-binaries/PassengerAgent &lt;SUBCOMMAND&gt; --help&apos; for help on a specific subcommand.
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>ARE WE small YET?</title>
+<link href="application.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="application.js" async="true" type="text/javascript"></script>
+</head>
+<body>
+<h1>ARE WE <span class='small'>small</span> YET?</h1>
+<div id='graph-container'>
+<div id='graph'></div>
+<span>
+Lower is better,
+<a onclick='$(&#39;table.hidden&#39;).show()'>show more stats</a>
+</span>
+</div>
+<div id='here_table'></div>
+<div id='footer'>
+<a href="https://github.com/CamJN/arewesmallyet">Sources on GitHub.</a>
+</div>
 
-Daemon subcommands:
-  core
-  watchdog
-
-Utility subcommands:
-  system-metrics
-  exec-helper
-</pre>
+</body>
+</html>

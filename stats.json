@@ -1,14 +1,1 @@
-Anerroroccurredwhilestartingupthepreloader.ItexitedbeforesignallingsuccessfulstartupbacktoPhusionPassenger.Pleaseread<ahref="https://github.com/phusion/passenger/wiki/Debugging-application-startup-problems">thisarticle</a>formoreinformationaboutthisproblem.<br>
-<h2>Rawprocessoutput:</h2>
-<pre>Usage:PassengerAgent&lt;SUBCOMMAND&gt;[options...]
-PhusionPassengerversion5.3.0.
-Type&apos;/Users/camdennarzt/Developer/C++/passenger/buildout/support-binaries/PassengerAgent&lt;SUBCOMMAND&gt;--help&apos;forhelponaspecificsubcommand.
-
-Daemonsubcommands:
-core
-watchdog
-
-Utilitysubcommands:
-system-metrics
-exec-helper
-</pre>
+{"max_mac":113293231,"min_mac":14676887,"max_win":139152011,"min_win":12100598,"max_win64":153316126,"min_win64":12145453,"max_linux":75169820,"min_linux":10577658,"max_linux64":68949041,"min_linux64":12038111,"count_linux":3035,"count_linux64":3034,"count_win":3040,"count_win64":2753,"first_win64":"2010-05-28","count_mac":3043,"count":3051,"first":"2010-01-01","last":"2018-05-09","slope_linux":0.245097447714725,"slope_linux64":0.239121951205795,"slope_win":0.202369428217439,"slope_win64":0.219403177943514,"slope_mac":0.281176358247913,"missing_days":[]}
